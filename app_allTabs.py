@@ -55,6 +55,6 @@ with tab2:
 
 with tab3:
     #st.info('''Đổi Dương Lịch sang Kim Cang CAN CHI Lịch''')
-    st.subheader(f'**TIÊU CHÍ CHỌN NGÀY/GIỜ TỐT**')
+    st.subheader(f'**TIÊU CHÍ CHỌN NGÀY/GIỜ**')
     st.markdown('<span style="color: darkblue; font-size: 20px;">**LUẬT BÙ TRỪ TƯƠNG QUAN:**</span>', unsafe_allow_html=True)
     DoiLich.coso_phuongphaptinh()
