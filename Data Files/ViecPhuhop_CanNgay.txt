@@ -1,0 +1,10 @@
+Giáp;  Giáp(Mộc): Nên làm việc thuộc tính Thủy, Hỏa, Kim. Tránh việc Mộc, Thổ.
+Ất;  Ất(Mộc): Nên làm việc thuộc tính Thủy, Hỏa, Kim. Tránh việc Mộc, Thổ.
+Bính;  Bính(Hỏa): Nên làm việc thuộc tính Hỏa, Thổ, Thủy. Tránh việc Mộc, Kim.
+Đinh; Đinh(Hỏa): Nên làm việc thuộc tính Hỏa, Thổ, Thủy. Tránh việc Mộc, Kim.
+Mậu; Mậu(Thổ): Nên làm việc thuộc tính Thổ, Mộc, Hỏa. Tránh việc Thủy, Kim.
+Kỷ; Kỷ(Thổ): Nên làm việc thuộc tính Thổ, Mộc, Hỏa. Tránh việc Thủy, Kim.
+Canh; Canh(Kim): Nên làm việc thuộc tính Mộc, Kim, Thổ. Tránh việc Thủy, Hỏa.
+Tân; Tân(Kim): Nên làm việc thuộc tính Mộc, Kim, Thổ. Tránh việc Thủy, Hỏa.
+Nhâm; Nhâm(Thủy): Nên làm việc thuộc tính Kim, Thủy, Mộc. Tránh việc Thổ, Hỏa.
+Quý; Quý(Thủy): Nên làm việc thuộc tính Kim, Thủy, Mộc. Tránh việc Thổ, Hỏa.

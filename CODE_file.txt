@@ -1,0 +1,681 @@
+1.
+
+def kiem_tra_cung_cuc_ngay_hien_tai(nam_canchi, thang_canchi, ngay_canchi):
+    """
+    Kiểm tra ngày hiện tại theo 2 cấp độ Khí Cùng Cực:
+    1. Cấp Năm: Tháng này có phạm Cùng Cực của Năm không?
+    2. Cấp Tháng: Ngày này có phạm Cùng Cực của Tháng không?
+    """
+    can_nam = nam_canchi.split()[0]
+    can_thang = thang_canchi.split()[0]
+    can_ngay = ngay_canchi.split()[0]
+
+    # --- TẦNG 1: KIỂM TRA THÁNG ĐỐI VỚI NĂM ---
+    can_cung_nam, can_cuc_nam = xac_dinh_cung_cuc(can_nam)
+    pham_thang = None
+    if can_thang == can_cung_nam: pham_thang = "Khí Cùng của Năm"
+    if can_thang == can_cuc_nam: pham_thang = "Khí Cực của Năm"
+
+    # --- TẦNG 2: KIỂM TRA NGÀY ĐỐI VỚI THÁNG ---
+    can_cung_thang, can_cuc_thang = xac_dinh_cung_cuc(can_thang)
+    pham_ngay = None
+    if can_ngay == can_cung_thang: pham_ngay = "Khí Cùng của Tháng"
+    if can_ngay == can_cuc_thang: pham_ngay = "Khí Cực của Tháng"
+
+    return {
+        "thang_pham": pham_thang,
+        "ngay_pham": pham_ngay,
+        "can_ky_thang": (can_cung_nam, can_cuc_nam),
+        "can_ky_ngay": (can_cung_thang, can_cuc_thang)
+    }
+
+def display_cung_cuc_ngay_hien_tai(nam_canchi, thang_canchi, ngay_canchi):
+
+    def kiem_tra_cung_cuc_ngay_hien_tai(nam_canchi, thang_canchi, ngay_canchi):
+        """
+        Kiểm tra ngày hiện tại theo 2 cấp độ Khí Cùng Cực:
+        1. Cấp Năm: Tháng này có phạm Cùng Cực của Năm không?
+        2. Cấp Tháng: Ngày này có phạm Cùng Cực của Tháng không?
+        """
+        can_nam = nam_canchi.split()[0]
+        can_thang = thang_canchi.split()[0]
+        can_ngay = ngay_canchi.split()[0]
+
+        # --- TẦNG 1: KIỂM TRA THÁNG ĐỐI VỚI NĂM ---
+        can_cung_nam, can_cuc_nam = xac_dinh_cung_cuc(can_nam)
+        pham_thang = None
+        if can_thang == can_cung_nam: pham_thang = "Khí Cùng của Năm"
+        if can_thang == can_cuc_nam: pham_thang = "Khí Cực của Năm"
+
+        # --- TẦNG 2: KIỂM TRA NGÀY ĐỐI VỚI THÁNG ---
+        can_cung_thang, can_cuc_thang = xac_dinh_cung_cuc(can_thang)
+        pham_ngay = None
+        if can_ngay == can_cung_thang: pham_ngay = "Khí Cùng của Tháng"
+        if can_ngay == can_cuc_thang: pham_ngay = "Khí Cực của Tháng"
+
+        return {
+            "thang_pham": pham_thang,
+            "ngay_pham": pham_ngay,
+            "can_ky_thang": (can_cung_nam, can_cuc_nam),
+            "can_ky_ngay": (can_cung_thang, can_cuc_thang)
+        }
+    
+    res = kiem_tra_cung_cuc_ngay_hien_tai(nam_canchi, thang_canchi, ngay_canchi)
+    
+    st.markdown(f"Kiểm tra Khí Cùng Cực (**ngày {ngay_canchi}**)")
+    
+    # Hiển thị Cảnh báo cấp Tháng
+    if res["thang_pham"]:
+        st.error(f"⚠️ **CẢNH BÁO THÁNG:** Tháng {thang_canchi} đang phạm **{res['thang_pham']}** ({nam_canchi}).")
+    else:
+        st.success(f"✅ Tháng {thang_canchi} không vi phạm Khí Cùng Cực của năm {nam_canchi}.")
+
+    # Hiển thị Cảnh báo cấp Ngày
+    if res["ngay_pham"]:
+        st.error(f"❌ **CẢNH BÁO NGÀY:** Ngày {ngay_canchi} đang phạm **{res['ngay_pham']}** ({thang_canchi}).")
+        
+        # TRƯỜNG HỢP TRÙNG LẶP (Cực Hung)
+        if res["thang_pham"]:
+            st.error("💀 **ĐẠI NẠN:** Ngày và Tháng cùng phạm Cùng Cực. Khí vận bị triệt tiêu hoàn toàn, tuyệt đối không hành sự.")
+    else:
+        st.success(f"✅ Ngày {ngay_canchi} không vi phạm Khí Cùng Cực của tháng {thang_canchi}.")
+
+    # Hiển thị bảng tra nhanh Can kỵ
+    with st.expander("🔍 Chi tiết Can kỵ cấp độ Khí"):
+        st.write(f"- Năm {nam_canchi} kỵ tháng có Can: `{', '.join(res['can_ky_thang'])}`")
+        st.write(f"- Tháng {thang_canchi} kỵ ngày có Can: `{', '.join(res['can_ky_ngay'])}`")
+
+2. 
+
+def check_ngay_ky_sao_2026(ngay_thang_nam, content):
+    
+    def check_ngay_ky_2026(ngay_thang_nam, content):
+        """
+        Kiểm tra thông tin ghi chú tại cột 11 từ dữ liệu content.
+        - Nếu cột 11 có dữ liệu: Trả về thông tin để hiển thị.
+        - Nếu cột 11 trống: Bỏ qua.
+        """
+        # Danh sách sao hung để bổ sung cảnh báo (tùy chọn)
+        SAO_HUNG_LIST = ["Nguy", "Hư", "Nữ", "Bích", "Mão", "Sâm", "Quỷ", "Liễu", "Tinh", "Trương", "Dực"]
+
+        for row in content:
+            # So khớp ngày Dương lịch (Cột 0)
+            if str(row[0]).strip() == str(ngay_thang_nam).strip():
+                ghi_chu_ky = str(row[11]).strip()
+                sao_ten = str(row[7]).strip()
+                
+                # Logic: Nếu cột 11 có nội dung HOẶC ngày đó phạm sao hung
+                if ghi_chu_ky != "" or sao_ten in SAO_HUNG_LIST:
+                    return {
+                        "co_thong_tin": True,
+                        "ngay": row[0],
+                        "noi_dung": ghi_chu_ky if ghi_chu_ky != "" else f"Phạm sao {sao_ten} (Hung)",
+                        "sao": sao_ten,
+                        "can_chi": row[4] # Lấy thêm can chi để hiển thị cho rõ ràng
+                    }
+                    
+        return {"co_thong_tin": False}
+
+        # Giả sử ngay_dl_chon là ngày người dùng đang click vào xem
+    res = check_ngay_ky_2026(ngay_thang_nam, content)
+
+    if res["co_thong_tin"]:
+        
+        st.markdown(f"📋 Ghi chú Sao ngày {res['ngay']}")
+        
+        # Hiển thị Can Chi và Sao để người dùng dễ đối chiếu
+        st.write(f"**Ngày:** {res['can_chi']} | **Sao:** {res['sao']}")
+        
+        # Hiển thị nội dung cảnh báo từ cột 11
+        st.error(f"⚠️ {res['noi_dung']}")
+        
+        # Lời khuyên dựa trên sự hiện diện của nội dung
+        if "Kỵ" in res['noi_dung'] or "Sát" in res['noi_dung']:
+            st.caption("🚨 Đây là ngày có chỉ số hung cao, nên thận trọng tối đa.")
+
+3. 
+
+def ngay_hien_tai_co_ky(ngay_thang_nam, ket_qua_ngay):
+    
+    def kiem_tra_ngay_hien_tai_co_ky(ngay_thang_nam, ket_qua_tam_ky):
+        """
+        Đối soát ngày đang xem với danh sách Tam Kỳ hội tụ.
+        - ngay_dl_dang_xem: Ngày Dương lịch cần kiểm tra (định dạng chuỗi khớp với cột 0, VD: "13/03/2026")
+        - ket_qua_tam_ky: Biến 'ket_qua_ngay' trả về từ hàm he_thong_an_que_tam_ky
+        """
+        # Tìm kiếm ngày trong danh sách Tam Kỳ
+        ngay_trung_khop = next((item for item in ket_qua_tam_ky if item["Ngày DL"] == ngay_thang_nam), None)
+        
+        if ngay_trung_khop:
+            # Nếu trùng khớp, trả về thông tin chi tiết
+            return {
+                "is_ky": True,
+                "mồng": ngay_trung_khop["Mồng"],
+                "can_chi": ngay_trung_khop["Can Chi"],
+                "cung": ngay_trung_khop["Cung"],
+                "loai_ky": ngay_trung_khop["Gặp Kỳ"]
+            }
+        
+        return {"is_ky": False}
+
+    # Gọi hàm đối soát
+    check_res = kiem_tra_ngay_hien_tai_co_ky(ngay_thang_nam, ket_qua_ngay)
+
+    if check_res["is_ky"]:
+        # Hiển thị thông báo rực rỡ nếu là ngày Tam Kỳ
+        st.success(f"🌟 **THÔNG BÁO: Hôm nay {ngay_thang_nam} Là ngày TAM KỲ Hội Tụ!**")
+                    
+        st.markdown(f"👉 Ngày **{check_res['can_chi']}** hội tụ thanh khí của **{check_res['loai_ky']} Kỳ** tại cung **{check_res['cung']}**. Đây là thời điểm tốt để hành sự theo hệ thống Bát Tiết.")
+    else:
+        # Thông báo nếu không phải ngày Tam Kỳ
+        st.info(f"📅 Ngày {ngay_thang_nam} không nằm trong danh sách Gặp Kỳ của tháng này.")
+
+4. # TRIỆT LỘ KHÔNG VONG
+
+def tinh_logic_khong_triet(can_chi_input):
+    LST_CAN = ["Giáp", "Ất", "Bính", "Đinh", "Mậu", "Kỷ", "Canh", "Tân", "Nhâm", "Quý"]
+    LST_CHI = ["Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi", "Thân", "Dậu", "Tuất", "Hợi"]
+    
+    can_ht, chi_ht = can_chi_input.split()
+    idx_can, idx_chi = LST_CAN.index(can_ht), LST_CHI.index(chi_ht)
+
+    # 1. Tính Không Vong (Tuần Giáp)
+    idx_chi_giap = (idx_chi - idx_can) % 12
+    idx_kv = [(idx_chi_giap - 2) % 12, (idx_chi_giap - 1) % 12]
+    list_kv = [LST_CHI[i] for i in idx_kv]
+
+    # 2. Tính Triệt Lộ (Theo Can - Ngũ Tý Độn)
+    map_triet_lo = {
+        "Giáp": ["Thân", "Dậu"], "Kỷ": ["Thân", "Dậu"],
+        "Ất": ["Ngọ", "Mùi"], "Canh": ["Ngọ", "Mùi"],
+        "Bính": ["Thìn", "Tỵ"], "Tân": ["Thìn", "Tỵ"],
+        "Đinh": ["Dần", "Mão"], "Nhâm": ["Dần", "Mão"],
+        "Mậu": ["Tý", "Sửu"], "Quý": ["Tý", "Sửu"]
+    }
+    list_tl = map_triet_lo.get(can_ht, [])
+    
+    return list_kv, list_tl
+
+def kiem_tra_trietkhong_ngay_hien_tai(ngay_canchi, thang_canchi):
+    """
+    Kiểm tra toàn diện một ngày dựa trên 2 hệ quy chiếu:
+    1. Nội tại: Ngày đó gây ra Triệt/Không cho giờ nào?
+    2. Hệ thống: Ngày đó có bị Tháng 'triệt' hay 'không' hay không?
+    """
+    # Lấy logic chung (đã thống nhất: KV theo Tuần, TL theo Can)
+    def get_logic(cc):
+        kv, tl = tinh_logic_khong_triet(cc) # Hàm đã viết ở turn trước
+        return kv, tl
+
+    can_ngay, chi_ngay = ngay_canchi.split()
+    
+    # 1. TÍNH TOÁN
+    kv_cua_thang, tl_cua_thang = get_logic(thang_canchi)
+    kv_cua_ngay, tl_cua_ngay = get_logic(ngay_canchi)
+
+    st.markdown(f"**🧩 Khí vận TRIỆT LỘ KHÔNG VONG**")
+
+    # --- PHẦN A: KIỂM TRA NGÀY ĐÓ CÓ PHẠM LUẬT CỦA THÁNG KHÔNG ---
+    st.markdown(f"1. Vị thế của Ngày **{ngay_canchi}**/Tháng **{thang_canchi}**")
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        is_nguyet_kv = chi_ngay in kv_cua_thang
+        status_kv = "🔴 PHẠM" if is_nguyet_kv else "✅ Không"
+        st.write(f"**Phạm Không Vong của Tháng:** {status_kv}")
+        if is_nguyet_kv:
+            st.caption(f"(Do tháng {thang_canchi} trống tại {', '.join(kv_cua_thang)})")
+
+    with col2:
+        is_nguyet_tl = chi_ngay in tl_cua_thang
+        status_tl = "🔴 PHẠM" if is_nguyet_tl else "✅ Không"
+        st.write(f"**Phạm Triệt Lộ của Tháng:** {status_tl}")
+        if is_nguyet_tl:
+            st.caption(f"(Do Can {thang_canchi.split()[0]} của tháng chặn tại {', '.join(tl_cua_thang)})")
+
+    # --- PHẦN C: TỔNG KẾT ---
+    if is_nguyet_kv or is_nguyet_tl:
+        if is_nguyet_kv and is_nguyet_tl:
+            st.error("💀 **Kết Luận:** Ngày này là điểm 'Khí Tuyệt' của tháng theo phép tính Triệt Lộ Không Vong (nên Tránh)")
+        else:
+            st.warning("⚠️ **Kết Luận:** Ngày này bị lỗi khí Triệt Lộ Không Vong từ cấp Tháng.")
+    else:
+        st.success("🌟 **Kết Luận:** Ngày này có vị thế tốt so với Tháng, khí vận theo phép tính Triệt Lộ Không Vong thông suốt.")
+
+
+    # --- PHẦN B: ẢNH HƯỞNG CỦA NGÀY ĐẾN CÁC GIỜ (NỘI TẠI) ---
+    st.markdown("**2. Sức ảnh hưởng nội tại của Ngày**")
+    st.info(f"Trong ngày {ngay_canchi}, khí vận tự thân sẽ tạo ra các vùng trống/chặn sau:")
+    
+    st.write(f"👉 **Giờ Không Vong (Rỗng):** {', '.join(kv_cua_ngay)}")
+    st.write(f"👉 **Giờ Triệt Lộ (Chặn):** {', '.join(tl_cua_ngay)}")
+
+5. # VÒNG SAO THANH LONG
+
+def vong_thanh_long (thang_canchi, ngayCanChi, ngay_thang_nam):
+    # Vòng Sao Thanh Long
+    # Giả sử ta muốn tính Giờ Hoàng Đạo cho ngày hiện tại
+    st.markdown(f"✨ **Vòng Sao Hoàng Đạo**")
+      
+    chi_thang = lay_dia_chi(thang_canchi)
+    chi_ngay = lay_dia_chi(ngayCanChi)
+
+    def an_vong_thanh_long(dia_chi_nhap):
+        DIA_CHI = ["Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi", "Thân", "Dậu", "Tuất", "Hợi"]
+        DANH_SACH_12_SAO = [
+            ("Thanh Long", "Hoàng Đạo"), ("Minh Đường", "Hoàng Đạo"), ("Thiên Hình", "Hắc Đạo"),
+            ("Chu Tước", "Hắc Đạo"),     ("Kim Quỹ", "Hoàng Đạo"),    ("Bảo Quang", "Hoàng Đạo"),
+            ("Bạch Hổ", "Hắc Đạo"),      ("Ngọc Đường", "Hoàng Đạo"), ("Thiên Lao", "Hắc Đạo"),
+            ("Huyền Vũ", "Hắc Đạo"),     ("Tư Mệnh", "Hoàng Đạo"),    ("Câu Trần", "Hắc Đạo")
+        ]
+        BANG_KHOI_THANH_LONG = {
+            "Dần": "Tý", "Thân": "Tý", "Mão": "Dần", "Dậu": "Dần",
+            "Thìn": "Thìn", "Tuất": "Thìn", "Tỵ": "Ngọ", "Hợi": "Ngọ",
+            "Tý": "Thân", "Ngọ": "Thân", "Sửu": "Tuất", "Mùi": "Tuất"
+        }
+        
+        chi_chuan = dia_chi_nhap.split()[-1]
+        cung_khoi = BANG_KHOI_THANH_LONG.get(chi_chuan)
+        if not cung_khoi: return None
+
+        idx_khoi = DIA_CHI.index(cung_khoi)
+        vong_sao = {}
+        for i in range(12):
+            ten_cung = DIA_CHI[(idx_khoi + i) % 12]
+            vong_sao[ten_cung] = DANH_SACH_12_SAO[i]
+        return vong_sao
+
+    def kiem_tra_ngay_hoang_dao(chi_thang, chi_ngay):
+        # 1. An vòng sao Thanh Long dựa trên Chi Tháng
+        vong_sao_thang = an_vong_thanh_long(chi_thang)
+        
+        if not vong_sao_thang:
+            return None
+        
+        # 2. Lấy thông tin sao của Chi Ngày hiện tại
+        # Vì chi_ngay có thể là "Giáp Tý", ta dùng .split()[-1] để lấy "Tý"
+        ten_chi_ngay = chi_ngay.split()[-1]
+        sao_cua_ngay, loai_dao = vong_sao_thang.get(ten_chi_ngay, (None, None))
+        
+        return sao_cua_ngay, loai_dao
+    
+    sao_ngay, loai_ngay = kiem_tra_ngay_hoang_dao(chi_thang, chi_ngay)
+    if sao_ngay:
+        # Hiển thị tiêu đề nhanh
+        status_icon = "⏰" if loai_ngay == "Hoàng Đạo" else "🌑"
+        st.markdown(f"{status_icon}Hôm Nay {ngay_thang_nam} _ {ngayCanChi} là ngày: **{loai_ngay}**")
+
+        with st.expander(f"🔍 Chi tiết Ngày {chi_ngay} _ Tháng {chi_thang}"):
+            col1, col2 = st.columns(2)
+              
+            with col1:
+                st.write(f"Địa Chi Tháng: **{chi_thang}**")
+                st.write(f"Địa Chi Ngày: **{chi_ngay}**")
+              
+            with col2:
+                if loai_ngay == "Hoàng Đạo":
+                    st.success(f"**Sao chủ:** {sao_ngay}")
+                    st.info("Đây là ngày Cát lành, thuận lợi cho các việc khởi sự, ký kết.")
+                else:
+                    st.error(f"Sao chủ: **{sao_ngay}**")
+                    st.warning("Đây là ngày Hắc đạo, nên thận trọng trong các việc đại sự.")
+
+            # Hiển thị thêm bảng tra nhanh 12 ngày trong tháng này (Tùy chọn)
+            st.divider()
+            st.caption(f"**Bảng tra sao 12 địa chi trong tháng {thang_canchi}:**")
+            vong_full = an_vong_thanh_long(chi_thang)
+              
+            # Hiển thị dạng dòng ngang gọn gàng
+            hc_cols = st.columns(6)
+            for i, (c, info) in enumerate(vong_full.items()):
+                with hc_cols[i % 6]:
+                    color = "green" if info[1] == "Hoàng Đạo" else "gray"
+                    st.markdown(f"**{c}**\n:{color}[{info[0]}]")
+
+    vong_sao_gio = an_vong_thanh_long(chi_ngay)
+    if vong_sao_gio:
+        with st.expander(f"🔍 Giờ Hoàng Đạo / Hắc Đạo (Ngày {ngayCanChi})"):
+            # Tạo 2 cột bên trong expander để tối ưu không gian
+            col_trai, col_phai = st.columns(2)
+              
+            for idx, (cung, info) in enumerate(vong_sao_gio.items()):
+                ten_sao, loai_dao = info
+                  
+                # Định dạng nội dung hiển thị
+                if loai_dao == "Hoàng Đạo":
+                    text_hien_thi = f"✅ **Giờ {cung}**: {ten_sao} (Hoàng Đạo)"
+                    # Chọn cột để in
+                    target_col = col_trai if idx < 6 else col_phai
+                    target_col.success(text_hien_thi)
+                else:
+                    text_hien_thi = f"❌ Giờ {cung}: {ten_sao} (Hắc Đạo)"
+                    target_col = col_trai if idx < 6 else col_phai
+                    target_col.text(text_hien_thi)
+
+6. # GIỜ QUÝ NHÂN ĐĂNG THIÊN MÔN
+
+def tinh_gio_quy_nhan_dang_thien_mon(ngay_canchi, ngay_thang_nam, content):
+
+    def tinh_gio_quy_nhan_tu_content(ngay_dl_hien_tai, content_data):
+
+        """
+        ngay_dl_hien_tai: chuỗi định dạng "dd/mm/yyyy" khớp với cột 0
+        content_data: mảng dữ liệu lịch từ file
+        """
+        lst_chi = ["Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi", "Thân", "Dậu", "Tuất", "Hợi"]
+        
+        # Bảng mapping Nguyệt Tướng (Dựa theo ảnh bạn cung cấp)
+        map_nguyet_tuong = {
+            "Vũ Thủy": "Hợi", "Kinh Trập": "Hợi",
+            "Xuân Phân": "Tuất", "Thanh Minh": "Tuất",
+            "Cốc Vũ": "Dậu", "Lập Hạ": "Dậu",
+            "Tiểu Mãn": "Thân", "Mang Chủng": "Thân",
+            "Hạ Chí": "Mùi", "Tiểu Thử": "Mùi",
+            "Đại Thử": "Ngọ", "Lập Thu": "Ngọ",
+            "Xử Thử": "Tỵ", "Bạch Lộ": "Tỵ",
+            "Thu Phân": "Thìn", "Hàn Lộ": "Thìn",
+            "Sương Giáng": "Mão", "Lập Đông": "Mão",
+            "Tiểu Tuyết": "Dần", "Đại Tuyết": "Dần",
+            "Đông Chí": "Sửu", "Tiểu Hàn": "Sửu",
+            "Đại Hàn": "Tý", "Lập Xuân": "Tý"
+        }
+
+        # Bảng Quý Nhân (Dương/Âm)
+        map_quy_nhan = {
+            "Giáp": {"D": "Mùi", "A": "Sửu"}, "Ất": {"D": "Thân", "A": "Tý"},
+            "Bính": {"D": "Dậu", "A": "Hợi"}, "Đinh": {"D": "Hợi", "A": "Dậu"},
+            "Mậu": {"D": "Sửu", "A": "Mùi"}, "Kỷ": {"D": "Tý", "A": "Thân"},
+            "Canh": {"D": "Sửu", "A": "Mùi"}, "Tân": {"D": "Dần", "A": "Ngọ"},
+            "Nhâm": {"D": "Mão", "A": "Tỵ"}, "Quý": {"D": "Tỵ", "A": "Mão"}
+        }
+
+        # Bước 1 & 2: Tìm dòng dữ liệu và trích xuất thông tin
+        row_hien_tai = None
+        for row in content_data:
+            if str(row[0]).strip() == ngay_dl_hien_tai:
+                row_hien_tai = row
+                break
+        
+        if not row_hien_tai:
+            return "Không tìm thấy dữ liệu cho ngày này trong content."
+
+        # Lấy thông tin từ cột index
+        can_chi_ngay = str(row_hien_tai[4]).strip() # Can Chi Ngày
+        can_ngay = can_chi_ngay.split()[0]          # Lấy Thiên Can
+        tiet_khi = str(row_hien_tai[5]).strip()     # Tiết Khí (Index 5)
+
+        # Bước 3: Xác định Nguyệt Tướng
+        tuong_chi = map_nguyet_tuong.get(tiet_khi)
+        if not tuong_chi:
+            return f"Tiết khí '{tiet_khi}' không nằm trong bảng Nguyệt Tướng."
+
+        # Bước 4: Tính toán logic Thiên Môn (Hợi = 11)
+        T = lst_chi.index(tuong_chi)
+        H = 11
+        
+        Q_duong = lst_chi.index(map_quy_nhan[can_ngay]["D"])
+        Q_am = lst_chi.index(map_quy_nhan[can_ngay]["A"])
+
+        gio_duong = lst_chi[(H - Q_duong + T) % 12]
+        gio_am = lst_chi[(H - Q_am + T) % 12]
+
+        return {
+            "Ngày": ngay_dl_hien_tai,
+            "Can Chi": can_chi_ngay,
+            "Tiết Khí": tiet_khi,
+            "Nguyệt Tướng": tuong_chi,
+            "Giờ Dương Quý": gio_duong,
+            "Giờ Âm Quý": gio_am
+        }
+
+    res_quy_nhan = tinh_gio_quy_nhan_tu_content(ngay_thang_nam, content)
+    st.markdown("☀️ **GIỜ QUÝ NHÂN ĐĂNG THIÊN MÔN**")
+    st.markdown(f"Ngày **{ngay_thang_nam} _ {ngay_canchi}:**")
+
+
+    if isinstance(res_quy_nhan, dict):
+        st.info(f"Dựa trên Tiết khí **{res_quy_nhan['Tiết Khí']}** (Tướng {res_quy_nhan['Nguyệt Tướng']})")
+        
+        col1, col2 = st.columns(2)
+        with col1:
+            st.success(f"**Giờ Dương Quý:** {res_quy_nhan['Giờ Dương Quý']}")
+            st.caption("Dương Quý nhân đăng thiên môn chỉ Quý khi gia ở giờ ban ngày (từ giờ Mão đến giờ Thân). Ngoài dải không dùng")
+        with col2:
+            st.success(f"**Giờ Âm Quý:** {res_quy_nhan['Giờ Âm Quý']}")
+            st.caption("Âm Quý Nhân đăng thiên môn chỉ Quý khi gia ở giờ ban đêm (từ giờ Dậu đến giờ Dần). Ngoài dải không dùng")
+        
+        st.markdown("> **Lưu ý:** Đây là giờ tối thượng cát khánh, có thể dùng để khởi hành, khai trương hoặc thực hiện các việc quan trọng để hóa giải hung sát.")
+    else:
+        st.error(res_quy_nhan)
+
+==================================================================
+
+# ==========================================
+# 2. HÀM HỢP NHẤT DỮ LIỆU (AGGREGATOR)
+# ==========================================
+#Tập hợp tất cả dữ liệu các phương pháp chon Ngày Giờ vào 1 danh sách duy nhất.
+
+def hop_nhat_lich_thang(thang_cc, content, ngay_tam_ky_list):
+
+    # 1. Lấy danh sách ngày thô từ content
+    ngay_trong_thang = [row for row in content if len(row) > 3 and row[3].strip() == thang_cc]
+    
+    # 2. Khởi tạo danh bạ ngày (Key là mồng)
+    lich_tong_hop = {}
+    for i, row in enumerate(ngay_trong_thang):
+        m = i + 1
+        lich_tong_hop[m] = {
+            "mồng": m,
+            "ngay_dl": row[0],
+            "can_chi": row[4],
+            "cat": [],    # Danh sách các sao/điểm tốt
+            "hung": [],   # Danh sách các sao/điểm xấu
+            "28sao": row[7],
+            "truc": row [9],
+            "ghi_chu": [] # Thông tin bổ trợ (cung vị, giải nghĩa)
+        }
+    #st.write(lich_tong_hop)
+    # 3. THU THẬP THÔNG TIN TỪ TAM KỲ
+    for item in ngay_tam_ky_list:
+        m = item['Mồng']
+        if m in lich_tong_hop:
+            lich_tong_hop[m]["cat"].append(f"Tam Kỳ ({item['Gặp Kỳ']})")
+            lich_tong_hop[m]["ghi_chu"].append(f"Cung {item['Cung']}")
+
+    # 4. (MỞ RỘNG) THU THẬP TỪ CÁC PHƯƠNG PHÁP KHÁC Ở ĐÂY
+    # THU THẬP VÒNG THANH LONG (HOÀNG ĐẠO / HẮC ĐẠO) ---
+    # Bước này tính xem các địa chi ngày trong tháng rơi vào sao nào dựa trên Chi tháng
+    def an_vong_thanh_long(dia_chi_nhap):
+        DIA_CHI = ["Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi", "Thân", "Dậu", "Tuất", "Hợi"]
+        DANH_SACH_12_SAO = [
+            ("Thanh Long", "Hoàng Đạo"), ("Minh Đường", "Hoàng Đạo"), ("Thiên Hình", "Hắc Đạo"),
+            ("Chu Tước", "Hắc Đạo"),     ("Kim Quỹ", "Hoàng Đạo"),    ("Bảo Quang", "Hoàng Đạo"),
+            ("Bạch Hổ", "Hắc Đạo"),      ("Ngọc Đường", "Hoàng Đạo"), ("Thiên Lao", "Hắc Đạo"),
+            ("Huyền Vũ", "Hắc Đạo"),     ("Tư Mệnh", "Hoàng Đạo"),    ("Câu Trần", "Hắc Đạo")
+        ]
+        BANG_KHOI_THANH_LONG = {
+            "Dần": "Tý", "Thân": "Tý", "Mão": "Dần", "Dậu": "Dần",
+            "Thìn": "Thìn", "Tuất": "Thìn", "Tỵ": "Ngọ", "Hợi": "Ngọ",
+            "Tý": "Thân", "Ngọ": "Thân", "Sửu": "Tuất", "Mùi": "Tuất"
+        }
+        
+        chi_chuan = dia_chi_nhap.split()[-1]
+        cung_khoi = BANG_KHOI_THANH_LONG.get(chi_chuan)
+        if not cung_khoi: return None
+
+        idx_khoi = DIA_CHI.index(cung_khoi)
+        vong_sao = {}
+        for i in range(12):
+            ten_cung = DIA_CHI[(idx_khoi + i) % 12]
+            vong_sao[ten_cung] = DANH_SACH_12_SAO[i]
+        return vong_sao
+
+    vong_sao_thang = an_vong_thanh_long(thang_cc) # Gọi hàm logic đã viết ở utils
+    
+    if vong_sao_thang:
+        for m in lich_tong_hop:
+            # 1. Lấy Địa Chi của ngày (Ví dụ: "Giáp Tý" lấy "Tý")
+            chi_ngay = lich_tong_hop[m]["can_chi"].split()[-1]
+            
+            # 2. Tra cứu sao tương ứng trong vòng 12 sao của tháng
+            sao_ten, dao_loai = vong_sao_thang.get(chi_ngay, (None, None))
+            
+            if sao_ten:
+                if dao_loai == "Hoàng Đạo":
+                    # Đưa vào danh sách Cát nếu là ngày tốt
+                    lich_tong_hop[m]["cat"].append(f"Hoàng Đạo ({sao_ten})")
+                else:
+                    # Đưa vào danh sách Hung nếu là ngày xấu (Hắc Đạo)
+                    lich_tong_hop[m]["hung"].append(f"Hắc Đạo ({sao_ten})")
+  
+
+    # E. Thu thập thông tin Tránh Khí Cùng Cực (Đại Kỵ)
+    # Gọi hàm lọc ngày cùng cực để lấy danh sách các ngày vi phạm trong tháng
+    ds_cung_cuc = loc_ngay_cung_cuc_trong_thang(content, thang_cc)
+    for row_ky in ds_cung_cuc:
+        # row_ky[0] là ngày Dương lịch, ta tìm mồng tương ứng bằng cách duyệt lich_tong_hop
+        for m in lich_tong_hop:
+            if lich_tong_hop[m]["ngay_dl"] == row_ky[0]:
+                # Nạp vào danh sách Hung (Đại kỵ)
+                noi_dung_pham = row_ky[13] # "Phạm Khí Cùng (Can...)" hoặc "Phạm Khí Cực"
+                lich_tong_hop[m]["hung"].append(f"🔴 {noi_dung_pham}")
+                break
+
+    # Nạp Sao và Trực (Trực cột 9, Sao cột 7)
+    for m in lich_tong_hop:
+        row = ngay_trong_thang[m-1]
+        if len(row) > 9:
+            truc = row[9].strip()
+            nguhanh_truc = row[10].strip()
+            sao = row[7].strip()
+            nguhanh_sao = row[8].strip()
+            # Ghi vào chú thích
+            lich_tong_hop[m]["ghi_chu"].append(f"Trực {truc} ({nguhanh_truc}) | Sao {sao} ({nguhanh_sao})")
+            #lich_tong_hop[m]["28sao"].append(f"Sao {sao}")
+            #lich_tong_hop[m]["truc"].append(f"Trực {truc}")
+
+    # F. Thu thập thông tin 24 Ngày Kỵ & Sao Hung (Từ ghi chú file dữ liệu)
+    ds_kieng_ky_file = loc_ngay_kieng_ky(content, thang_cc)
+    for row_k in ds_kieng_ky_file:
+        for m in lich_tong_hop:
+            if lich_tong_hop[m]["ngay_dl"] == row_k[0]:
+                # Nạp nội dung kiêng kỵ (Cột 11) vào danh sách Hung
+                noi_dung_k = row_k[11]
+                lich_tong_hop[m]["hung"].append(f"🛑 Kỵ: {noi_dung_k}")
+                
+                # Nếu sao đó là sao Hung (bạn có thể thêm logic lọc sao ở đây)
+                # Tạm thời ghi chú tên sao vào phần chi tiết
+                lich_tong_hop[m]["ghi_chu"].append(f"Sao xấu_2026")
+                break
+    
+    # TRIỆT LỘ KHÔNG VONG:
+    def tinh_logic_khong_triet(can_chi_input):
+        LST_CAN = ["Giáp", "Ất", "Bính", "Đinh", "Mậu", "Kỷ", "Canh", "Tân", "Nhâm", "Quý"]
+        LST_CHI = ["Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi", "Thân", "Dậu", "Tuất", "Hợi"]
+        
+        can_ht, chi_ht = can_chi_input.split()
+        idx_can, idx_chi = LST_CAN.index(can_ht), LST_CHI.index(chi_ht)
+
+        # 1. Tính Không Vong (Tuần Giáp)
+        idx_chi_giap = (idx_chi - idx_can) % 12
+        idx_kv = [(idx_chi_giap - 2) % 12, (idx_chi_giap - 1) % 12]
+        list_kv = [LST_CHI[i] for i in idx_kv]
+
+        # 2. Tính Triệt Lộ (Theo Can - Ngũ Tý Độn)
+        map_triet_lo = {
+            "Giáp": ["Thân", "Dậu"], "Kỷ": ["Thân", "Dậu"],
+            "Ất": ["Ngọ", "Mùi"], "Canh": ["Ngọ", "Mùi"],
+            "Bính": ["Thìn", "Tỵ"], "Tân": ["Thìn", "Tỵ"],
+            "Đinh": ["Dần", "Mão"], "Nhâm": ["Dần", "Mão"],
+            "Mậu": ["Tý", "Sửu"], "Quý": ["Tý", "Sửu"]
+        }
+        list_tl = map_triet_lo.get(can_ht, [])
+        
+        return list_kv, list_tl
+
+    # --- TRONG HÀM hop_nhat_lich_thang(thang_cc, ...) ---
+    # Lấy quy luật của THÁNG trước
+    kv_thang, tl_thang = tinh_logic_khong_triet(thang_cc)
+
+    for m in lich_tong_hop:
+        chi_ngay = lich_tong_hop[m]["can_chi"].split()[-1]
+        
+        # Kiểm tra ngày đó có phạm quy luật của THÁNG không
+        is_kv = chi_ngay in kv_thang
+        is_tl = chi_ngay in tl_thang
+        
+        if is_kv and is_tl:
+            lich_tong_hop[m]["hung"].append("💀 ĐẠI KỴ: KHÔNG VONG TRÙNG TRIỆT")
+            lich_tong_hop[m]["khi_status"] = "❌ Khí Tuyệt"
+        elif is_kv:
+            lich_tong_hop[m]["hung"].append("🔴 Phạm Nguyệt Không")
+            lich_tong_hop[m]["khi_status"] = "😶 Vô định"
+        elif is_tl:
+            lich_tong_hop[m]["hung"].append("🔴 Phạm Triệt Lộ Tháng")
+            lich_tong_hop[m]["khi_status"] = "🚧 Bị chặn"
+
+
+
+    
+    # Trả về kết quả cuối cùng đã được bồi đắp đầy đủ thông tin
+    return lich_tong_hop
+
+    
+def display_unified_calendar(nam_canchi, thang_canchi, thang_gieng, content):
+    """
+    Hàm hiển thị bảng lịch thống nhất, tập hợp mọi phương pháp tính toán.
+    """
+    st.markdown(f"**📅 LỊCH TRÌNH CÁT HUNG - THÁNG {thang_canchi.upper()}**")
+
+    # --- BƯỚC 1: TRIỆU HỒI DỮ LIỆU TỪ CÁC PHƯƠNG PHÁP ---
+    # Gọi hàm Tam Kỳ (Hàm v4 chúng ta đã xây dựng)
+    ngay_tot_tk, debug_tk = he_thong_an_que_tam_ky(nam_canchi, thang_canchi, thang_gieng, content)
+    
+    # (Bạn có thể gọi thêm các hàm khác ở đây trong tương lai)
+    # ngay_cung_cuc = ham_tinh_cung_cuc(thang_canchi, content)
+    # ngay_28_tu = ham_tinh_28_tu(content)
+
+    # --- BƯỚC 2: HỢP NHẤT DỮ LIỆU VÀO DANH BẠ THÁNG ---
+    # Gọi hàm hợp nhất đã phân tích
+    lich_tong_hop = hop_nhat_lich_thang(thang_canchi, content, ngay_tot_tk)
+
+
+    # --- BƯỚC 3: TRÌNH BÀY GIAO DIỆN ---
+    
+    # Tab 1: Bảng tổng hợp (Giao diện chính)
+    with st.expander(f"📊 Bảng tra cứu tổng hợp mồng 1 - 30", expanded=True):
+        data_rows = []
+        for m, info in lich_tong_hop.items():
+            # Xử lý hiển thị dấu chấm màu cho danh sách Cát/Hung
+            cat_display = "  \n".join([f"🟢 {c}" for c in info["cat"]]) if info["cat"] else "-"
+            hung_display = "  \n".join([f"🔴 {h}" for h in info["hung"]]) if info["hung"] else "-"
+            ghi_chu_display = " | ".join(info["ghi_chu"]) if info["ghi_chu"] else "-"
+            
+            data_rows.append({
+                "Mồng": f"{m}",
+                "Ngày Dương": info["ngay_dl"],
+                "Can Chi": info["can_chi"],
+                "Điểm Cát (Tốt)": cat_display,
+                "Điểm Hung (Xấu)": hung_display,
+                "Chi tiết": ghi_chu_display
+            })
+        
+        df = pd.DataFrame(data_rows)
+        
+        # Sử dụng st.dataframe với tính năng hiển thị Markdown (nếu cần) hoặc st.table
+        # Ở đây dùng st.dataframe để người dùng có thể lọc/tìm kiếm ngày
+        st.dataframe(
+            df, 
+            use_container_width=True, 
+            hide_index=True
+        )
+
+    # --- BƯỚC 4: LỜI KHUYÊN TỔNG QUAN ---
+    so_ngay_tot = len([m for m, v in lich_tong_hop.items() if v["cat"]])
+    if so_ngay_tot > 0:
+        st.toast(f"Tháng {thang_canchi} có {so_ngay_tot} ngày hội tụ khí Tam Kỳ!", icon="✨")
+    
+    return lich_tong_hop # Trả về để các Tab khác có thể dùng lại nếu cần
+
+
+

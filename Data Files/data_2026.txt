@@ -1,0 +1,367 @@
+Ngày DL, Tý thực, Năm, Tháng, Ngày, Tiết-Khí, Stt Sao, Sao, Ngũ hành Sao, Trực, Ngũ hành Trực, Kiêng Kỵ, STT
+22/12/2025, 23:01, Bính Ngọ, Mậu Tý, Giáp Tý, Đông Chí, 15, Khuê, Mộc, Kiến, Thổ, , 1
+23/12/2025, 23:00, Bính Ngọ, Mậu Tý, Ất Sửu, Đông Chí, 16, Lâu, Kim, Trừ, Thuỷ, Kỵ Lập Trạch, 2
+24/12/2025, 23:00, Bính Ngọ, Mậu Tý, Bính Dần, Đông Chí, 17, Vị, Thổ, Mãn, Thổ, Kỵ Lập Trạch, 3
+25/12/2025, 22:59, Bính Ngọ, Mậu Tý, Đinh Mão, Đông Chí, 18, Mão, Nhật, Bình, Thuỷ, Kỵ Lập Trạch, 4
+26/12/2025, 22:59, Bính Ngọ, Mậu Tý, Mậu Thìn, Đông Chí, 19, Tất, Nguyệt, Định, Mộc, , 5
+27/12/2025, 22:58, Bính Ngọ, Mậu Tý, Kỷ Tỵ, Đông Chí, 20, Chủy, Hoả, Chấp, Hoả, , 6
+28/12/2025, 22:58, Bính Ngọ, Mậu Tý, Canh Ngọ, Đông Chí, 21, Sâm, Thuỷ, Phá, Hoả, , 7
+29/12/2025, 22:57, Bính Ngọ, Mậu Tý, Tân Mùi, Đông Chí, 22, Tỉnh, Mộc, Nguy, Thuỷ, , 8
+30/12/2025, 22:57, Bính Ngọ, Mậu Tý, Nhâm Thân, Đông Chí, 23, Quỷ, Kim, Thành, Kim, Đại Hung, 9
+31/12/2025, 22:56, Bính Ngọ, Mậu Tý, Quý Dậu, Đông Chí, 24, Liễu, Thổ, Thu, Thuỷ, , 10
+01/01/2026, 22:56, Bính Ngọ, Mậu Tý, Giáp Tuất, Đông Chí, 25, Tinh, Nhật, Khai, Kim, , 11
+02/01/2026, 22:55, Bính Ngọ, Mậu Tý, Ất Hợi, Đông Chí, 26, Trương, Nguyệt, Bế, Kim, , 12
+03/01/2026, 22:55, Bính Ngọ, Mậu Tý, Bính Tý, Đông Chí, 27, Dực, Hoả, Kiến, Thổ, , 13
+04/01/2026, 22:54, Bính Ngọ, Mậu Tý, Đinh Sửu, Đông Chí, 28, Chẩn, Thuỷ, Trừ, Thuỷ, , 14
+05/01/2026, 22:54, Bính Ngọ, Mậu Tý, Mậu Dần, Đông Chí, 1, Giác, Mộc, Mãn, Thổ, , 15
+06/01/2026, 22:53, Bính Ngọ, Mậu Tý, Kỷ Mão, Tiểu Hàn, 2, Cang, Kim, Bình, Thuỷ, , 16
+07/01/2026, 22:53, Bính Ngọ, Mậu Tý, Canh Thìn, Tiểu Hàn, 3, Đê, Thổ, Định, Mộc, , 17
+08/01/2026, 22:52, Bính Ngọ, Mậu Tý, Tân Tỵ, Tiểu Hàn, 4, Phòng, Nhật, Chấp, Hoả, , 18
+09/01/2026, 22:52, Bính Ngọ, Mậu Tý, Nhâm Ngọ, Tiểu Hàn, 5, Tâm, Nguyệt, Phá, Hoả, , 19
+10/01/2026, 22:52, Bính Ngọ, Mậu Tý, Quý Mùi, Tiểu Hàn, 6, Vĩ, Hoả, Nguy, Thuỷ, , 20
+11/01/2026, 22:51, Bính Ngọ, Mậu Tý, Giáp Thân, Tiểu Hàn, 7, Cơ, Thuỷ, Thành, Kim, , 21
+12/01/2026, 22:51, Bính Ngọ, Mậu Tý, Ất Dậu, Tiểu Hàn, 8, Đẩu, Mộc, Thu, Thuỷ, Kỵ Lập Trạch, 22
+13/01/2026, 22:50, Bính Ngọ, Mậu Tý, Bính Tuất, Tiểu Hàn, 9, Ngưu, Kim, Khai, Kim, , 23
+14/01/2026, 22:50, Bính Ngọ, Mậu Tý, Đinh Hợi, Tiểu Hàn, 10, Nữ, Thổ, Bế, Kim, Kỵ Lập Trạch, 24
+15/01/2026, 22:50, Bính Ngọ, Mậu Tý, Mậu Tý, Tiểu Hàn, 11, Hư, Nhật, Kiến, Thổ, Kỵ Lập Trạch, 25
+16/01/2026, 22:50, Bính Ngọ, Mậu Tý, Kỷ Sửu, Tiểu Hàn, 12, Nguy, Nguyệt, Trừ, Thuỷ, , 26
+17/01/2026, 22:50, Bính Ngọ, Mậu Tý, Canh Dần, Tiểu Hàn, 13, Thất, Hoả, Mãn, Thổ, , 27
+18/01/2026, 22:49, Bính Ngọ, Mậu Tý, Tân Mão, Tiểu Hàn, 14, Bích, Thuỷ, Bình, Thuỷ, , 28
+19/01/2026, 22:49, Bính Ngọ, Mậu Tý, Nhâm Thìn, Tiểu Hàn, 15, Khuê, Mộc, Định, Mộc, , 29
+20/01/2026, 22:49, Bính Ngọ, Mậu Tý, Quý Tỵ, Tiểu Hàn, 16, Lâu, Kim, Chấp, Hoả, , 30
+21/01/2026, 22:48, Bính Ngọ, Kỷ Sửu, Giáp Ngọ, Đại Hàn, 17, Vị, Thổ, Chấp, Hoả, , 31
+22/01/2026, 22:48, Bính Ngọ, Kỷ Sửu, Ất Mùi, Đại Hàn, 18, Mão, Nhật, Phá, Hoả, , 32
+23/01/2026, 22:48, Bính Ngọ, Kỷ Sửu, Bính Thân, Đại Hàn, 19, Tất, Nguyệt, Nguy, Thuỷ, , 33
+24/01/2026, 22:47, Bính Ngọ, Kỷ Sửu, Đinh Dậu, Đại Hàn, 20, Chủy, Hoả, Thành, Kim, , 34
+25/01/2026, 22:47, Bính Ngọ, Kỷ Sửu, Mậu Tuất, Đại Hàn, 21, Sâm, Thuỷ, Thu, Thuỷ, , 35
+26/01/2026, 22:47, Bính Ngọ, Kỷ Sửu, Kỷ Hợi, Đại Hàn, 22, Tỉnh, Mộc, Khai, Kim, , 36
+27/01/2026, 22:47, Bính Ngọ, Kỷ Sửu, Canh Tý, Đại Hàn, 23, Quỷ, Kim, Bế, Kim, Đại Hung, 37
+28/01/2026, 22:47, Bính Ngọ, Kỷ Sửu, Tân Sửu, Đại Hàn, 24, Liễu, Thổ, Kiến, Thổ, , 38
+29/01/2026, 22:46, Bính Ngọ, Kỷ Sửu, Nhâm Dần, Đại Hàn, 25, Tinh, Nhật, Trừ, Thuỷ, , 39
+30/01/2026, 22:46, Bính Ngọ, Kỷ Sửu, Quý Mão, Đại Hàn, 26, Trương, Nguyệt, Mãn, Thổ, , 40
+31/01/2026, 22:46, Bính Ngọ, Kỷ Sửu, Giáp Thìn, Đại Hàn, 27, Dực, Hoả, Bình, Thuỷ, , 41
+01/02/2026, 22:46, Bính Ngọ, Kỷ Sửu, Ất Tỵ, Đại Hàn, 28, Chẩn, Thuỷ, Định, Mộc, , 42
+02/02/2026, 22:46, Bính Ngọ, Kỷ Sửu, Bính Ngọ, Đại Hàn, 1, Giác, Mộc, Chấp, Hoả, , 43
+03/02/2026, 22:46, Bính Ngọ, Kỷ Sửu, Đinh Mùi, Đại Hàn, 2, Cang, Kim, Phá, Hoả, , 44
+04/02/2026, 22:46, Bính Ngọ, Kỷ Sửu, Mậu Thân, Đại Hàn, 3, Đê, Thổ, Nguy, Thuỷ, , 45
+05/02/2026, 22:45, Bính Ngọ, Kỷ Sửu, Kỷ Dậu, Lập Xuân, 4, Phòng, Nhật, Thành, Kim, , 46
+06/02/2026, 22:45, Bính Ngọ, Kỷ Sửu, Canh Tuất, Lập Xuân, 5, Tâm, Nguyệt, Thu, Thuỷ, , 47
+07/02/2026, 22:45, Bính Ngọ, Kỷ Sửu, Tân Hợi, Lập Xuân, 6, Vĩ, Hoả, Khai, Kim, , 48
+08/02/2026, 22:45, Bính Ngọ, Kỷ Sửu, Nhâm Tý, Lập Xuân, 7, Cơ, Thuỷ, Bế, Kim, , 49
+09/02/2026, 22:45, Bính Ngọ, Kỷ Sửu, Quý Sửu, Lập Xuân, 8, Đẩu, Mộc, Kiến, Thổ, Kỵ Lập Trạch, 50
+10/02/2026, 22:45, Bính Ngọ, Kỷ Sửu, Giáp Dần, Lập Xuân, 9, Ngưu, Kim, Trừ, Thuỷ, , 51
+11/02/2026, 22:45, Bính Ngọ, Kỷ Sửu, Ất Mão, Lập Xuân, 10, Nữ, Thổ, Mãn, Thổ, Kỵ Lập Trạch, 52
+12/02/2026, 22:45, Bính Ngọ, Kỷ Sửu, Bính Thìn, Lập Xuân, 11, Hư, Nhật, Bình, Thuỷ, Kỵ Lập Trạch, 53
+13/02/2026, 22:45, Bính Ngọ, Kỷ Sửu, Đinh Tỵ, Lập Xuân, 12, Nguy, Nguyệt, Định, Mộc, , 54
+14/02/2026, 22:45, Bính Ngọ, Kỷ Sửu, Mậu Ngọ, Lập Xuân, 13, Thất, Hoả, Chấp, Hoả, , 55
+15/02/2026, 22:45, Bính Ngọ, Kỷ Sửu, Kỷ Mùi, Lập Xuân, 14, Bích, Thuỷ, Phá, Hoả, , 56
+16/02/2026, 22:45, Bính Ngọ, Kỷ Sửu, Canh Thân, Lập Xuân, 15, Khuê, Mộc, Nguy, Thuỷ, , 57
+17/02/2026, 22:45, Bính Ngọ, Kỷ Sửu, Tân Dậu, Lập Xuân, 16, Lâu, Kim, Thành, Kim, , 58
+18/02/2026, 22:45, Bính Ngọ, Kỷ Sửu, Nhâm Tuất, Lập Xuân, 17, Vị, Thổ, Thu, Thuỷ, , 59
+19/02/2026, 22:46, Bính Ngọ, Kỷ Sửu, Quý Hợi, Lập Xuân, 18, Mão, Nhật, Khai, Kim, , 60
+20/02/2026, 22:46, Bính Ngọ, Kỷ Sửu, Quý Hợi, Lập Xuân, 18, Mão, Nhật, Khai, Kim, , 61
+21/02/2026, 22:46, Bính Ngọ, Canh Dần, Giáp Tý, Vũ Thuỷ, 19, Tất, Nguyệt, Khai, Kim, , 62
+22/02/2026, 22:46, Bính Ngọ, Canh Dần, Ất Sửu, Vũ Thuỷ, 20, Chủy, Hoả, Bế, Kim, , 63
+23/02/2026, 22:46, Bính Ngọ, Canh Dần, Bính Dần, Vũ Thuỷ, 21, Sâm, Thuỷ, Kiến, Thổ, , 64
+24/02/2026, 22:46, Bính Ngọ, Canh Dần, Đinh Mão, Vũ Thuỷ, 22, Tỉnh, Mộc, Trừ, Thuỷ, , 65
+25/02/2026, 22:46, Bính Ngọ, Canh Dần, Mậu Thìn, Vũ Thuỷ, 23, Quỷ, Kim, Mãn, Thổ, Đại Hung, 66
+26/02/2026, 22:46, Bính Ngọ, Canh Dần, Kỷ Tỵ, Vũ Thuỷ, 24, Liễu, Thổ, Bình, Thuỷ, , 67
+27/02/2026, 22:47, Bính Ngọ, Canh Dần, Canh Ngọ, Vũ Thuỷ, 25, Tinh, Nhật, Định, Mộc, , 68
+28/02/2026, 22:47, Bính Ngọ, Canh Dần, Tân Mùi, Vũ Thuỷ, 26, Trương, Nguyệt, Chấp, Hoả, , 69
+01/03/2026, 22:47, Bính Ngọ, Canh Dần, Nhâm Thân, Vũ Thuỷ, 27, Dực, Hoả, Phá, Hoả, , 70
+02/03/2026, 22:47, Bính Ngọ, Canh Dần, Quý Dậu, Vũ Thuỷ, 28, Chẩn, Thuỷ, Nguy, Thuỷ, , 71
+03/03/2026, 22:47, Bính Ngọ, Canh Dần, Giáp Tuất, Vũ Thuỷ, 1, Giác, Mộc, Thành, Kim, , 72
+04/03/2026, 22:48, Bính Ngọ, Canh Dần, Ất Hợi, Vũ Thuỷ, 2, Cang, Kim, Thu, Thuỷ, , 73
+05/03/2026, 22:48, Bính Ngọ, Canh Dần, Bính Tý, Vũ Thuỷ, 3, Đê, Thổ, Khai, Kim, , 74
+06/03/2026, 22:48, Bính Ngọ, Canh Dần, Đinh Sửu, Vũ Thuỷ, 4, Phòng, Nhật, Bế, Kim, , 75
+07/03/2026, 22:48, Bính Ngọ, Canh Dần, Mậu Dần, Vũ Thuỷ, 5, Tâm, Nguyệt, Kiến, Thổ, , 76
+08/03/2026, 22:49, Bính Ngọ, Canh Dần, Kỷ Mão, Kinh Trập, 6, Vĩ, Hoả, Trừ, Thuỷ, , 77
+09/03/2026, 22:49, Bính Ngọ, Canh Dần, Canh Thìn, Kinh Trập, 7, Cơ, Thuỷ, Mãn, Thổ, , 78
+10/03/2026, 22:49, Bính Ngọ, Canh Dần, Tân Tỵ, Kinh Trập, 8, Đẩu, Mộc, Bình, Thuỷ, Kỵ Lập Trạch, 79
+11/03/2026, 22:49, Bính Ngọ, Canh Dần, Nhâm Ngọ, Kinh Trập, 9, Ngưu, Kim, Định, Mộc, , 80
+12/03/2026, 22:50, Bính Ngọ, Canh Dần, Quý Mùi, Kinh Trập, 10, Nữ, Thổ, Chấp, Hoả, Kỵ Lập Trạch, 81
+13/03/2026, 22:50, Bính Ngọ, Canh Dần, Giáp Thân, Kinh Trập, 11, Hư, Nhật, Phá, Hoả, Kỵ Lập Trạch, 82
+14/03/2026, 22:50, Bính Ngọ, Canh Dần, Ất Dậu, Kinh Trập, 12, Nguy, Nguyệt, Nguy, Thuỷ, , 83
+15/03/2026, 22:50, Bính Ngọ, Canh Dần, Bính Tuất, Kinh Trập, 13, Thất, Hoả, Thành, Kim, , 84
+16/03/2026, 22:51, Bính Ngọ, Canh Dần, Đinh Hợi, Kinh Trập, 14, Bích, Thuỷ, Thu, Thuỷ, , 85
+17/03/2026, 22:51, Bính Ngọ, Canh Dần, Mậu Tý, Kinh Trập, 15, Khuê, Mộc, Khai, Kim, , 86
+18/03/2026, 22:51, Bính Ngọ, Canh Dần, Kỷ Sửu, Kinh Trập, 16, Lâu, Kim, Bế, Kim, , 87
+19/03/2026, 22:52, Bính Ngọ, Canh Dần, Canh Dần, Kinh Trập, 17, Vị, Thổ, Kiến, Thổ, , 88
+20/03/2026, 22:52, Bính Ngọ, Canh Dần, Tân Mão, Kinh Trập, 18, Mão, Nhật, Trừ, Thuỷ, , 89
+21/03/2026, 22:52, Bính Ngọ, Canh Dần, Nhâm Thìn, Kinh Trập, 19, Tất, Nguyệt, Mãn, Thổ, , 90
+22/03/2026, 22:52, Bính Ngọ, Canh Dần, Quý Tỵ, Kinh Trập, 20, Chủy, Hoả, Bình, Thuỷ, , 91
+23/03/2026, 22:53, Bính Ngọ, Tân Mão, Giáp Ngọ, Xuân Phân, 21, Sâm, Thuỷ, Bình, Thuỷ, , 92
+24/03/2026, 22:53, Bính Ngọ, Tân Mão, Ất Mùi, Xuân Phân, 22, Tỉnh, Mộc, Định, Mộc, , 93
+25/03/2026, 22:53, Bính Ngọ, Tân Mão, Bính Thân, Xuân Phân, 23, Quỷ, Kim, Chấp, Hoả, Đại Hung, 94
+26/03/2026, 22:54, Bính Ngọ, Tân Mão, Đinh Dậu, Xuân Phân, 24, Liễu, Thổ, Phá, Hoả, , 95
+27/03/2026, 22:54, Bính Ngọ, Tân Mão, Mậu Tuất, Xuân Phân, 25, Tinh, Nhật, Nguy, Thuỷ, , 96
+28/03/2026, 22:54, Bính Ngọ, Tân Mão, Kỷ Hợi, Xuân Phân, 26, Trương, Nguyệt, Thành, Kim, , 97
+29/03/2026, 22:55, Bính Ngọ, Tân Mão, Canh Tý, Xuân Phân, 27, Dực, Hoả, Thu, Thuỷ, , 98
+30/03/2026, 22:55, Bính Ngọ, Tân Mão, Tân Sửu, Xuân Phân, 28, Chẩn, Thuỷ, Khai, Kim, , 99
+31/03/2026, 22:55, Bính Ngọ, Tân Mão, Nhâm Dần, Xuân Phân, 1, Giác, Mộc, Bế, Kim, , 100
+01/04/2026, 22:56, Bính Ngọ, Tân Mão, Quý Mão, Xuân Phân, 2, Cang, Kim, Kiến, Thổ, , 101
+02/04/2026, 22:57, Bính Ngọ, Tân Mão, Giáp Thìn, Xuân Phân, 3, Đê, Thổ, Trừ, Thuỷ, , 102
+03/04/2026, 22:57, Bính Ngọ, Tân Mão, Ất Tỵ, Xuân Phân, 4, Phòng, Nhật, Mãn, Thổ, , 103
+04/04/2026, 22:57, Bính Ngọ, Tân Mão, Bính Ngọ, Xuân Phân, 5, Tâm, Nguyệt, Bình, Thuỷ, , 104
+05/04/2026, 22:57, Bính Ngọ, Tân Mão, Đinh Mùi, Xuân Phân, 6, Vĩ, Hoả, Định, Mộc, , 105
+06/04/2026, 22:58, Bính Ngọ, Tân Mão, Mậu Thân, Xuân Phân, 7, Cơ, Thuỷ, Chấp, Hoả, , 106
+07/04/2026, 22:58, Bính Ngọ, Tân Mão, Kỷ Dậu, Thanh Minh, 8, Đẩu, Mộc, Phá, Hoả, Kỵ Lập Trạch, 107
+08/04/2026, 22:58, Bính Ngọ, Tân Mão, Canh Tuất, Thanh Minh, 9, Ngưu, Kim, Nguy, Thuỷ, , 108
+09/04/2026, 22:58, Bính Ngọ, Tân Mão, Tân Hợi, Thanh Minh, 10, Nữ, Thổ, Thành, Kim, Kỵ Lập Trạch, 109
+10/04/2026, 22:59, Bính Ngọ, Tân Mão, Nhâm Tý, Thanh Minh, 11, Hư, Nhật, Thu, Thuỷ, Kỵ Lập Trạch, 110
+11/04/2026, 22:59, Bính Ngọ, Tân Mão, Quý Sửu, Thanh Minh, 12, Nguy, Nguyệt, Khai, Kim, , 111
+12/04/2026, 22:59, Bính Ngọ, Tân Mão, Giáp Dần, Thanh Minh, 13, Thất, Hoả, Bế, Kim, , 112
+13/04/2026, 22:59, Bính Ngọ, Tân Mão, Ất Mão, Thanh Minh, 14, Bích, Thuỷ, Kiến, Thổ, , 113
+14/04/2026, 22:59, Bính Ngọ, Tân Mão, Bính Thìn, Thanh Minh, 15, Khuê, Mộc, Trừ, Thuỷ, , 114
+15/04/2026, 22:59, Bính Ngọ, Tân Mão, Đinh Tỵ, Thanh Minh, 16, Lâu, Kim, Mãn, Thổ, , 115
+16/04/2026, 23:00, Bính Ngọ, Tân Mão, Mậu Ngọ, Thanh Minh, 17, Vị, Thổ, Bình, Thuỷ, , 116
+17/04/2026, 23:00, Bính Ngọ, Tân Mão, Kỷ Mùi, Thanh Minh, 18, Mão, Nhật, Định, Mộc, , 117
+18/04/2026, 23:00, Bính Ngọ, Tân Mão, Canh Thân, Thanh Minh, 19, Tất, Nguyệt, Chấp, Hoả, , 118
+19/04/2026, 23:00, Bính Ngọ, Tân Mão, Tân Dậu, Thanh Minh, 20, Chủy, Hoả, Phá, Hoả, , 119
+20/04/2026, 23:01, Bính Ngọ, Tân Mão, Nhâm Tuất, Thanh Minh, 21, Sâm, Thuỷ, Nguy, Thuỷ, , 120
+21/04/2026, 23:01, Bính Ngọ, Tân Mão, Quý Hợi, Thanh Minh, 21, Tỉnh, Mộc, Thành, Kim, , 121
+22/04/2026, 23:01, Bính Ngọ, Tân Mão, Quý Hợi, Thanh Minh, 22, Tỉnh, Mộc, Thành, Kim, , 122
+23/04/2026, 23:01, Bính Ngọ, Nhâm Thìn, Giáp Tý, Cốc Vũ, 23, Quỷ, Kim, Thành, Kim, Đại Hung, 123
+24/04/2026, 23:01, Bính Ngọ, Nhâm Thìn, Ất Sửu, Cốc Vũ, 24, Liễu, Thổ, Thu, Thuỷ, , 124
+25/04/2026, 23:01, Bính Ngọ, Nhâm Thìn, Bính Dần, Cốc Vũ, 25, Tinh, Nhật, Khai, Kim, , 125
+26/04/2026, 23:01, Bính Ngọ, Nhâm Thìn, Đinh Mão, Cốc Vũ, 26, Trương, Nguyệt, Bế, Kim, , 126
+27/04/2026, 23:02, Bính Ngọ, Nhâm Thìn, Mậu Thìn, Cốc Vũ, 27, Dực, Hoả, Kiến, Thổ, , 127
+28/04/2026, 23:02, Bính Ngọ, Nhâm Thìn, Kỷ Tỵ, Cốc Vũ, 28, Chẩn, Thuỷ, Trừ, Thuỷ, , 128
+29/04/2026, 23:02, Bính Ngọ, Nhâm Thìn, Canh Ngọ, Cốc Vũ, 1, Giác, Mộc, Mãn, Thổ, , 129
+30/04/2026, 23:02, Bính Ngọ, Nhâm Thìn, Tân Mùi, Cốc Vũ, 2, Cang, Kim, Bình, Thuỷ, , 130
+01/05/2026, 23:02, Bính Ngọ, Nhâm Thìn, Nhâm Thân, Cốc Vũ, 3, Đê, Thổ, Định, Mộc, , 131
+02/05/2026, 23:02, Bính Ngọ, Nhâm Thìn, Quý Dậu, Cốc Vũ, 4, Phòng, Nhật, Chấp, Hoả, , 132
+03/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Giáp Tuất, Cốc Vũ, 5, Tâm, Nguyệt, Phá, Hoả, , 133
+04/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Ất Hợi, Cốc Vũ, 6, Vĩ, Hoả, Nguy, Thuỷ, , 134
+05/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Bính Tý, Cốc Vũ, 7, Cơ, Thuỷ, Thành, Kim, , 135
+06/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Đinh Sửu, Cốc Vũ, 8, Đẩu, Mộc, Thu, Thuỷ, Kỵ Lập Trạch, 136
+07/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Mậu Dần, Cốc Vũ, 9, Ngưu, Kim, Khai, Kim, , 137
+08/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Kỷ Mão, Lập Hạ, 10, Nữ, Thổ, Bế, Kim, Kỵ Lập Trạch, 138
+09/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Canh Thìn, Lập Hạ, 11, Hư, Nhật, Kiến, Thổ, Kỵ Lập Trạch, 139
+10/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Tân Tỵ, Lập Hạ, 12, Nguy, Nguyệt, Trừ, Thuỷ, , 140
+11/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Nhâm Ngọ, Lập Hạ, 13, Thất, Hoả, Mãn, Thổ, , 141
+12/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Quý Mùi, Lập Hạ, 14, Bích, Thuỷ, Bình, Thuỷ, , 142
+13/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Giáp Thân, Lập Hạ, 15, Khuê, Mộc, Định, Mộc, , 143
+14/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Ất Dậu, Lập Hạ, 16, Lâu, Kim, Chấp, Hoả, , 144
+15/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Bính Tuất, Lập Hạ, 17, Vị, Thổ, Phá, Hoả, , 145
+16/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Đinh Hợi, Lập Hạ, 18, Mão, Nhật, Nguy, Thuỷ, , 146
+17/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Mậu Tý, Lập Hạ, 19, Tất, Nguyệt, Thành, Kim, , 147
+18/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Kỷ Sửu, Lập Hạ, 20, Chủy, Hoả, Thu, Thuỷ, , 148
+19/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Canh Dần, Lập Hạ, 21, Sâm, Thuỷ, Khai, Kim, , 149
+20/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Tân Mão, Lập Hạ, 22, Tỉnh, Mộc, Bế, Kim, , 150
+21/05/2026, 23:03, Bính Ngọ, Nhâm Thìn, Nhâm Thìn, Lập Hạ, 23, Quỷ, Kim, Kiến, Thổ, Đại Hung, 151
+22/05/2026, 23:03, Bính Ngọ, Quý Tỵ, Quý Tỵ, Lập Hạ, 24, Liễu, Thổ, Trừ, Thuỷ, , 152
+23/05/2026, 23:03, Bính Ngọ, Quý Tỵ, Giáp Ngọ, Tiểu Mãn, 25, Tinh, Nhật, Trừ, Thuỷ, , 153
+24/05/2026, 23:03, Bính Ngọ, Quý Tỵ, Ất Mùi, Tiểu Mãn, 26, Trương, Nguyệt, Mãn, Thổ, , 154
+25/05/2026, 23:03, Bính Ngọ, Quý Tỵ, Bính Thân, Tiểu Mãn, 27, Dực, Hoả, Bình, Thuỷ, , 155
+26/05/2026, 23:03, Bính Ngọ, Quý Tỵ, Đinh Dậu, Tiểu Mãn, 28, Chẩn, Thuỷ, Định, Mộc, , 156
+27/05/2026, 23:02, Bính Ngọ, Quý Tỵ, Mậu Tuất, Tiểu Mãn, 1, Giác, Mộc, Chấp, Hoả, , 157
+28/05/2026, 23:02, Bính Ngọ, Quý Tỵ, Kỷ Hợi, Tiểu Mãn, 2, Cang, Kim, Phá, Hoả, , 158
+29/05/2026, 23:02, Bính Ngọ, Quý Tỵ, Canh Tý, Tiểu Mãn, 3, Đê, Thổ, Nguy, Thuỷ, , 159
+30/05/2026, 23:02, Bính Ngọ, Quý Tỵ, Tân Sửu, Tiểu Mãn, 4, Phòng, Nhật, Thành, Kim, , 160
+31/05/2026, 23:02, Bính Ngọ, Quý Tỵ, Nhâm Dần, Tiểu Mãn, 5, Tâm, Nguyệt, Thu, Thuỷ, , 161
+01/06/2026, 23:02, Bính Ngọ, Quý Tỵ, Quý Mão, Tiểu Mãn, 6, Vĩ, Hoả, Khai, Kim, , 162
+02/06/2026, 23:02, Bính Ngọ, Quý Tỵ, Giáp Thìn, Tiểu Mãn, 7, Cơ, Thuỷ, Bế, Kim, , 163
+03/06/2026, 23:02, Bính Ngọ, Quý Tỵ, Ất Tỵ, Tiểu Mãn, 8, Đẩu, Mộc, Kiến, Thổ, Kỵ Lập Trạch, 164
+04/06/2026, 23:01, Bính Ngọ, Quý Tỵ, Bính Ngọ, Tiểu Mãn, 9, Ngưu, Kim, Trừ, Thuỷ, , 165
+05/06/2026, 23:01, Bính Ngọ, Quý Tỵ, Đinh Mùi, Tiểu Mãn, 10, Nữ, Thổ, Mãn, Thổ, Kỵ Lập Trạch, 166
+06/06/2026, 23:01, Bính Ngọ, Quý Tỵ, Mậu Thân, Tiểu Mãn, 11, Hư, Nhật, Bình, Thuỷ, Kỵ Lập Trạch, 167
+07/06/2026, 23:01, Bính Ngọ, Quý Tỵ, Kỷ Dậu, Mang Chủng, 12, Nguy, Nguyệt, Định, Mộc, , 168
+08/06/2026, 23:01, Bính Ngọ, Quý Tỵ, Canh Tuất, Mang Chủng, 13, Thất, Hoả, Chấp, Hoả, , 169
+09/06/2026, 23:00, Bính Ngọ, Quý Tỵ, Tân Hợi, Mang Chủng, 14, Bích, Thuỷ, Phá, Hoả, , 170
+10/06/2026, 23:00, Bính Ngọ, Quý Tỵ, Nhâm Tý, Mang Chủng, 15, Khuê, Mộc, Nguy, Thuỷ, , 171
+11/06/2026, 23:00, Bính Ngọ, Quý Tỵ, Quý Sửu, Mang Chủng, 16, Lâu, Kim, Thành, Kim, , 172
+12/06/2026, 23:00, Bính Ngọ, Quý Tỵ, Giáp Dần, Mang Chủng, 17, Vị, Thổ, Thu, Thuỷ, , 173
+13/06/2026, 23:00, Bính Ngọ, Quý Tỵ, Ất Mão, Mang Chủng, 18, Mão, Nhật, Khai, Kim, , 174
+14/06/2026, 22:59, Bính Ngọ, Quý Tỵ, Bính Thìn, Mang Chủng, 19, Tất, Nguyệt, Bế, Kim, , 175
+15/06/2026, 22:59, Bính Ngọ, Quý Tỵ, Đinh Tỵ, Mang Chủng, 20, Chủy, Hoả, Kiến, Thổ, , 176
+16/06/2026, 22:59, Bính Ngọ, Quý Tỵ, Mậu Ngọ, Mang Chủng, 21, Sâm, Thuỷ, Trừ, Thuỷ, , 177
+17/06/2026, 22:59, Bính Ngọ, Quý Tỵ, Kỷ Mùi, Mang Chủng, 22, Tỉnh, Mộc, Mãn, Thổ, , 178
+18/06/2026, 22:59, Bính Ngọ, Quý Tỵ, Canh Thân, Mang Chủng, 23, Quỷ, Kim, Bình, Thuỷ, Đại Hung, 179
+19/06/2026, 22:58, Bính Ngọ, Quý Tỵ, Tân Dậu, Mang Chủng, 24, Liễu, Thổ, Định, Mộc, , 180
+20/06/2026, 22:58, Bính Ngọ, Quý Tỵ, Nhâm Tuất, Mang Chủng, 25, Tinh, Nhật, Chấp, Hoả, , 181
+21/06/2026, 22:59, Bính Ngọ, Quý Tỵ, Quý Hợi, Mang Chủng, 25, Trương, Nguyệt, Phá, Hoả, , 182
+22/06/2026, 22:58, Bính Ngọ, Quý Tỵ, Quý Hợi, Mang Chủng, 26, Trương, Nguyệt, Phá, Hoả, , 183
+23/06/2026, 22:58, Bính Ngọ, Giáp Ngọ, Giáp Tý, Hạ Chí, 27, Dực, Hoả, Phá, Hoả, , 184
+24/06/2026, 22:57, Bính Ngọ, Giáp Ngọ, Ất Sửu, Hạ Chí, 28, Chẩn, Thuỷ, Nguy, Thuỷ, , 185
+25/06/2026, 22:57, Bính Ngọ, Giáp Ngọ, Bính Dần, Hạ Chí, 1, Giác, Mộc, Thành, Kim, , 186
+26/06/2026, 22:57, Bính Ngọ, Giáp Ngọ, Đinh Mão, Hạ Chí, 2, Cang, Kim, Thu, Thuỷ, , 187
+27/06/2026, 22:57, Bính Ngọ, Giáp Ngọ, Mậu Thìn, Hạ Chí, 3, Đê, Thổ, Khai, Kim, , 188
+28/06/2026, 22:57, Bính Ngọ, Giáp Ngọ, Kỷ Tỵ, Hạ Chí, 4, Phòng, Nhật, Bế, Kim, , 189
+29/06/2026, 22:56, Bính Ngọ, Giáp Ngọ, Canh Ngọ, Hạ Chí, 5, Tâm, Nguyệt, Kiến, Thổ, , 190
+30/06/2026, 22:56, Bính Ngọ, Giáp Ngọ, Tân Mùi, Hạ Chí, 6, Vĩ, Hoả, Trừ, Thuỷ, , 191
+01/07/2026, 22:56, Bính Ngọ, Giáp Ngọ, Nhâm Thân, Hạ Chí, 7, Cơ, Thuỷ, Mãn, Thổ, , 192
+02/07/2026, 22:56, Bính Ngọ, Giáp Ngọ, Quý Dậu, Hạ Chí, 8, Đẩu, Mộc, Bình, Thuỷ, Kỵ Lập Trạch, 193
+03/07/2026, 22:56, Bính Ngọ, Giáp Ngọ, Giáp Tuất, Hạ Chí, 9, Ngưu, Kim, Định, Mộc, , 194
+04/07/2026, 22:55, Bính Ngọ, Giáp Ngọ, Ất Hợi, Hạ Chí, 10, Nữ, Thổ, Chấp, Hoả, Kỵ Lập Trạch, 195
+05/07/2026, 22:55, Bính Ngọ, Giáp Ngọ, Bính Tý, Hạ Chí, 11, Hư, Nhật, Phá, Hoả, Kỵ Lập Trạch, 196
+06/07/2026, 22:55, Bính Ngọ, Giáp Ngọ, Đinh Sửu, Hạ Chí, 12, Nguy, Nguyệt, Nguy, Thuỷ, , 197
+07/07/2026, 22:55, Bính Ngọ, Giáp Ngọ, Mậu Dần, Hạ Chí, 13, Thất, Hoả, Thành, Kim, , 198
+08/07/2026, 22:55, Bính Ngọ, Giáp Ngọ, Kỷ Mão, Tiểu Thử, 14, Bích, Thuỷ, Thu, Thuỷ, , 199
+09/07/2026, 22:55, Bính Ngọ, Giáp Ngọ, Canh Thìn, Tiểu Thử, 15, Khuê, Mộc, Khai, Kim, , 200
+10/07/2026, 22:54, Bính Ngọ, Giáp Ngọ, Tân Tỵ, Tiểu Thử, 16, Lâu, Kim, Bế, Kim, , 201
+11/07/2026, 22:54, Bính Ngọ, Giáp Ngọ, Nhâm Ngọ, Tiểu Thử, 17, Vị, Thổ, Kiến, Thổ, , 202
+12/07/2026, 22:54, Bính Ngọ, Giáp Ngọ, Quý Mùi, Tiểu Thử, 18, Mão, Nhật, Trừ, Thuỷ, , 203
+13/07/2026, 22:54, Bính Ngọ, Giáp Ngọ, Giáp Thân, Tiểu Thử, 19, Tất, Nguyệt, Mãn, Thổ, , 204
+14/07/2026, 22:54, Bính Ngọ, Giáp Ngọ, Ất Dậu, Tiểu Thử, 20, Chủy, Hoả, Bình, Thuỷ, , 205
+15/07/2026, 22:54, Bính Ngọ, Giáp Ngọ, Bính Tuất, Tiểu Thử, 21, Sâm, Thuỷ, Định, Mộc, , 206
+16/07/2026, 22:54, Bính Ngọ, Giáp Ngọ, Đinh Hợi, Tiểu Thử, 22, Tỉnh, Mộc, Chấp, Hoả, , 207
+17/07/2026, 22:54, Bính Ngọ, Giáp Ngọ, Mậu Tý, Tiểu Thử, 23, Quỷ, Kim, Phá, Hoả, Đại Hung, 208
+18/07/2026, 22:54, Bính Ngọ, Giáp Ngọ, Kỷ Sửu, Tiểu Thử, 24, Liễu, Thổ, Nguy, Thuỷ, , 209
+19/07/2026, 22:53, Bính Ngọ, Giáp Ngọ, Canh Dần, Tiểu Thử, 25, Tinh, Nhật, Thành, Kim, , 210
+20/07/2026, 22:53, Bính Ngọ, Giáp Ngọ, Tân Mão, Tiểu Thử, 26, Trương, Nguyệt, Thu, Thuỷ, , 211
+21/07/2026, 22:53, Bính Ngọ, Giáp Ngọ, Nhâm Thìn, Tiểu Thử, 27, Dực, Hoả, Khai, Kim, , 212
+22/07/2026, 22:53, Bính Ngọ, Giáp Ngọ, Quý Tỵ, Tiểu Thử, 28, Chẩn, Thuỷ, Bế, Kim, , 213
+23/07/2026, 22:53, Bính Ngọ, Ất Mùi, Giáp Ngọ, Đại Thử, 1, Giác, Mộc, Bế, Kim, , 214
+24/07/2026, 22:53, Bính Ngọ, Ất Mùi, Ất Mùi, Đại Thử, 2, Cang, Kim, Kiến, Thổ, , 215
+25/07/2026, 22:53, Bính Ngọ, Ất Mùi, Bính Thân, Đại Thử, 3, Đê, Thổ, Trừ, Thuỷ, , 216
+26/07/2026, 22:53, Bính Ngọ, Ất Mùi, Đinh Dậu, Đại Thử, 4, Phòng, Nhật, Mãn, Thổ, , 217
+27/07/2026, 22:53, Bính Ngọ, Ất Mùi, Mậu Tuất, Đại Thử, 5, Tâm, Nguyệt, Bình, Thuỷ, , 218
+28/07/2026, 22:53, Bính Ngọ, Ất Mùi, Kỷ Hợi, Đại Thử, 6, Vĩ, Hoả, Định, Mộc, , 219
+29/07/2026, 22:53, Bính Ngọ, Ất Mùi, Canh Tý, Đại Thử, 7, Cơ, Thuỷ, Chấp, Hoả, , 220
+30/07/2026, 22:53, Bính Ngọ, Ất Mùi, Tân Sửu, Đại Thử, 8, Đẩu, Mộc, Phá, Hoả, Kỵ Lập Trạch, 221
+31/07/2026, 22:53, Bính Ngọ, Ất Mùi, Nhâm Dần, Đại Thử, 9, Ngưu, Kim, Nguy, Thuỷ, , 222
+01/08/2026, 22:53, Bính Ngọ, Ất Mùi, Quý Mão, Đại Thử, 10, Nữ, Thổ, Thành, Kim, Kỵ Lập Trạch, 223
+02/08/2026, 22:53, Bính Ngọ, Ất Mùi, Giáp Thìn, Đại Thử, 11, Hư, Nhật, Thu, Thuỷ, Kỵ Lập Trạch, 224
+03/08/2026, 22:54, Bính Ngọ, Ất Mùi, Ất Tỵ, Đại Thử, 12, Nguy, Nguyệt, Khai, Kim, , 225
+04/08/2026, 22:54, Bính Ngọ, Ất Mùi, Bính Ngọ, Đại Thử, 13, Thất, Hoả, Bế, Kim, , 226
+05/08/2026, 22:54, Bính Ngọ, Ất Mùi, Đinh Mùi, Đại Thử, 14, Bích, Thuỷ, Kiến, Thổ, , 227
+06/08/2026, 22:54, Bính Ngọ, Ất Mùi, Mậu Thân, Đại Thử, 15, Khuê, Mộc, Trừ, Thuỷ, , 228
+07/08/2026, 22:54, Bính Ngọ, Ất Mùi, Kỷ Dậu, Lập Thu, 16, Lâu, Kim, Mãn, Thổ, , 229
+08/08/2026, 22:54, Bính Ngọ, Ất Mùi, Canh Tuất, Lập Thu, 17, Vị, Thổ, Bình, Thuỷ, , 230
+09/08/2026, 22:54, Bính Ngọ, Ất Mùi, Tân Hợi, Lập Thu, 18, Mão, Nhật, Định, Mộc, , 231
+10/08/2026, 22:54, Bính Ngọ, Ất Mùi, Nhâm Tý, Lập Thu, 19, Tất, Nguyệt, Chấp, Hoả, , 232
+11/08/2026, 22:54, Bính Ngọ, Ất Mùi, Quý Sửu, Lập Thu, 20, Chủy, Hoả, Phá, Hoả, , 233
+12/08/2026, 22:55, Bính Ngọ, Ất Mùi, Giáp Dần, Lập Thu, 21, Sâm, Thuỷ, Nguy, Thuỷ, , 234
+13/08/2026, 22:55, Bính Ngọ, Ất Mùi, Ất Mão, Lập Thu, 22, Tỉnh, Mộc, Thành, Kim, , 235
+14/08/2026, 22:55, Bính Ngọ, Ất Mùi, Bính Thìn, Lập Thu, 23, Quỷ, Kim, Thu, Thuỷ, Đại Hung, 236
+15/08/2026, 22:55, Bính Ngọ, Ất Mùi, Đinh Tỵ, Lập Thu, 24, Liễu, Thổ, Khai, Kim, , 237
+16/08/2026, 22:55, Bính Ngọ, Ất Mùi, Mậu Ngọ, Lập Thu, 25, Tinh, Nhật, Bế, Kim, , 238
+17/08/2026, 22:56, Bính Ngọ, Ất Mùi, Kỷ Mùi, Lập Thu, 26, Trương, Nguyệt, Kiến, Thổ, , 239
+18/08/2026, 22:56, Bính Ngọ, Ất Mùi, Canh Thân, Lập Thu, 27, Dực, Hoả, Trừ, Thuỷ, , 240
+19/08/2026, 22:56, Bính Ngọ, Ất Mùi, Tân Dậu, Lập Thu, 28, Chẩn, Thuỷ, Mãn, Thổ, , 241
+20/08/2026, 22:56, Bính Ngọ, Ất Mùi, Nhâm Tuất, Lập Thu, 1, Giác, Mộc, Bình, Thuỷ, , 242
+21/08/2026, 22:56, Bính Ngọ, Ất Mùi, Quý Hợi, Lập Thu, 1, Cang, Kim, Định, Mộc, , 243
+22/08/2026, 22:57, Bính Ngọ, Ất Mùi, Quý Hợi, Lập Thu, 2, Cang, Kim, Định, Mộc, , 244
+23/08/2026, 22:57, Bính Ngọ, Bính Thân, Giáp Tý, Xử Thử, 3, Đê, Thổ, Định, Mộc, , 245
+24/08/2026, 22:57, Bính Ngọ, Bính Thân, Ất Sửu, Xử Thử, 4, Phòng, Nhật, Chấp, Hoả, , 246
+25/08/2026, 22:57, Bính Ngọ, Bính Thân, Bính Dần, Xử Thử, 5, Tâm, Nguyệt, Phá, Hoả, , 247
+26/08/2026, 22:58, Bính Ngọ, Bính Thân, Đinh Mão, Xử Thử, 6, Vĩ, Hoả, Nguy, Thuỷ, , 248
+27/08/2026, 22:58, Bính Ngọ, Bính Thân, Mậu Thìn, Xử Thử, 7, Cơ, Thuỷ, Thành, Kim, , 249
+28/08/2026, 22:58, Bính Ngọ, Bính Thân, Kỷ Tỵ, Xử Thử, 8, Đẩu, Mộc, Thu, Thuỷ, Kỵ Lập Trạch, 250
+29/08/2026, 22:58, Bính Ngọ, Bính Thân, Canh Ngọ, Xử Thử, 9, Ngưu, Kim, Khai, Kim, , 251
+30/08/2026, 22:58, Bính Ngọ, Bính Thân, Tân Mùi, Xử Thử, 10, Nữ, Thổ, Bế, Kim, Kỵ Lập Trạch, 252
+31/08/2026, 22:58, Bính Ngọ, Bính Thân, Nhâm Thân, Xử Thử, 11, Hư, Nhật, Kiến, Thổ, Kỵ Lập Trạch, 253
+01/09/2026, 22:59, Bính Ngọ, Bính Thân, Quý Dậu, Xử Thử, 12, Nguy, Nguyệt, Trừ, Thuỷ, , 254
+02/09/2026, 23:00, Bính Ngọ, Bính Thân, Giáp Tuất, Xử Thử, 13, Thất, Hoả, Mãn, Thổ, , 255
+03/09/2026, 23:00, Bính Ngọ, Bính Thân, Ất Hợi, Xử Thử, 14, Bích, Thuỷ, Bình, Thuỷ, , 256
+04/09/2026, 23:00, Bính Ngọ, Bính Thân, Bính Tý, Xử Thử, 15, Khuê, Mộc, Định, Mộc, , 257
+05/09/2026, 23:01, Bính Ngọ, Bính Thân, Đinh Sửu, Xử Thử, 16, Lâu, Kim, Chấp, Hoả, , 258
+06/09/2026, 23:01, Bính Ngọ, Bính Thân, Mậu Dần, Xử Thử, 17, Vị, Thổ, Phá, Hoả, , 259
+07/09/2026, 23:01, Bính Ngọ, Bính Thân, Kỷ Mão, Bạch Lộ, 18, Mão, Nhật, Nguy, Thuỷ, , 260
+08/09/2026, 23:02, Bính Ngọ, Bính Thân, Canh Thìn, Bạch Lộ, 19, Tất, Nguyệt, Thành, Kim, , 261
+09/09/2026, 23:02, Bính Ngọ, Bính Thân, Tân Tỵ, Bạch Lộ, 20, Chủy, Hoả, Thu, Thuỷ, , 262
+10/09/2026, 23:02, Bính Ngọ, Bính Thân, Nhâm Ngọ, Bạch Lộ, 21, Sâm, Thuỷ, Khai, Kim, , 263
+11/09/2026, 23:03, Bính Ngọ, Bính Thân, Quý Mùi, Bạch Lộ, 22, Tỉnh, Mộc, Bế, Kim, , 264
+12/09/2026, 23:03, Bính Ngọ, Bính Thân, Giáp Thân, Bạch Lộ, 23, Quỷ, Kim, Kiến, Thổ, Đại Hung, 265
+13/09/2026, 23:03, Bính Ngọ, Bính Thân, Ất Dậu, Bạch Lộ, 24, Liễu, Thổ, Trừ, Thuỷ, , 266
+14/09/2026, 23:04, Bính Ngọ, Bính Thân, Bính Tuất, Bạch Lộ, 25, Tinh, Nhật, Mãn, Thổ, , 267
+15/09/2026, 23:04, Bính Ngọ, Bính Thân, Đinh Hợi, Bạch Lộ, 26, Trương, Nguyệt, Bình, Thuỷ, , 268
+16/09/2026, 23:05, Bính Ngọ, Bính Thân, Mậu Tý, Bạch Lộ, 27, Dực, Hoả, Định, Mộc, , 269
+17/09/2026, 23:05, Bính Ngọ, Bính Thân, Kỷ Sửu, Bạch Lộ, 28, Chẩn, Thuỷ, Chấp, Hoả, , 270
+18/09/2026, 23:05, Bính Ngọ, Bính Thân, Canh Dần, Bạch Lộ, 1, Giác, Mộc, Phá, Hoả, , 271
+19/09/2026, 23:06, Bính Ngọ, Bính Thân, Tân Mão, Bạch Lộ, 2, Cang, Kim, Nguy, Thuỷ, , 272
+20/09/2026, 23:06, Bính Ngọ, Bính Thân, Nhâm Thìn, Bạch Lộ, 3, Đê, Thổ, Thành, Kim, , 273
+21/09/2026, 23:06, Bính Ngọ, Bính Thân, Quý Tỵ, Bạch Lộ, 4, Phòng, Nhật, Thu, Thuỷ, , 274
+22/09/2026, 23:07, Bính Ngọ, Đinh Dậu, Giáp Ngọ, Thu Phân, 5, Tâm, Nguyệt, Thu, Thuỷ, , 275
+23/09/2026, 23:07, Bính Ngọ, Đinh Dậu, Ất Mùi, Thu Phân, 6, Vĩ, Hoả, Khai, Kim, , 276
+24/09/2026, 23:07, Bính Ngọ, Đinh Dậu, Bính Thân, Thu Phân, 7, Cơ, Thuỷ, Bế, Kim, , 277
+25/09/2026, 23:08, Bính Ngọ, Đinh Dậu, Đinh Dậu, Thu Phân, 8, Đẩu, Mộc, Kiến, Thổ, Kỵ Lập Trạch, 278
+26/09/2026, 23:08, Bính Ngọ, Đinh Dậu, Mậu Tuất, Thu Phân, 9, Ngưu, Kim, Trừ, Thuỷ, , 279
+27/09/2026, 23:08, Bính Ngọ, Đinh Dậu, Kỷ Hợi, Thu Phân, 10, Nữ, Thổ, Mãn, Thổ, Kỵ Lập Trạch, 280
+28/09/2026, 23:09, Bính Ngọ, Đinh Dậu, Canh Tý, Thu Phân, 11, Hư, Nhật, Bình, Thuỷ, Kỵ Lập Trạch, 281
+29/09/2026, 23:09, Bính Ngọ, Đinh Dậu, Tân Sửu, Thu Phân, 12, Nguy, Nguyệt, Định, Mộc, , 282
+30/09/2026, 23:09, Bính Ngọ, Đinh Dậu, Nhâm Dần, Thu Phân, 13, Thất, Hoả, Chấp, Hoả, , 283
+01/10/2026, 23:10, Bính Ngọ, Đinh Dậu, Quý Mão, Thu Phân, 14, Bích, Thuỷ, Phá, Hoả, , 284
+02/10/2026, 23:10, Bính Ngọ, Đinh Dậu, Giáp Thìn, Thu Phân, 15, Khuê, Mộc, Nguy, Thuỷ, , 285
+03/10/2026, 23:10, Bính Ngọ, Đinh Dậu, Ất Tỵ, Thu Phân, 16, Lâu, Kim, Thành, Kim, , 286
+04/10/2026, 23:11, Bính Ngọ, Đinh Dậu, Bính Ngọ, Thu Phân, 17, Vị, Thổ, Thu, Thuỷ, , 287
+05/10/2026, 23:11, Bính Ngọ, Đinh Dậu, Đinh Mùi, Thu Phân, 18, Mão, Nhật, Khai, Kim, , 288
+06/10/2026, 23:11, Bính Ngọ, Đinh Dậu, Mậu Thân, Thu Phân, 19, Tất, Nguyệt, Bế, Kim, , 289
+07/10/2026, 23:12, Bính Ngọ, Đinh Dậu, Kỷ Dậu, Hàn Lộ, 20, Chủy, Hoả, Kiến, Thổ, , 290
+08/10/2026, 23:12, Bính Ngọ, Đinh Dậu, Canh Tuất, Hàn Lộ, 21, Sâm, Thuỷ, Trừ, Thuỷ, , 291
+09/10/2026, 23:12, Bính Ngọ, Đinh Dậu, Tân Hợi, Hàn Lộ, 22, Tỉnh, Mộc, Mãn, Thổ, , 292
+10/10/2026, 23:12, Bính Ngọ, Đinh Dậu, Nhâm Tý, Hàn Lộ, 23, Quỷ, Kim, Bình, Thuỷ, Đại Hung, 293
+11/10/2026, 23:13, Bính Ngọ, Đinh Dậu, Quý Sửu, Hàn Lộ, 24, Liễu, Thổ, Định, Mộc, , 294
+12/10/2026, 23:13, Bính Ngọ, Đinh Dậu, Giáp Dần, Hàn Lộ, 25, Tinh, Nhật, Chấp, Hoả, , 295
+13/10/2026, 23:13, Bính Ngọ, Đinh Dậu, Ất Mão, Hàn Lộ, 26, Trương, Nguyệt, Phá, Hoả, , 296
+14/10/2026, 23:13, Bính Ngọ, Đinh Dậu, Bính Thìn, Hàn Lộ, 27, Dực, Hoả, Nguy, Thuỷ, , 297
+15/10/2026, 23:14, Bính Ngọ, Đinh Dậu, Đinh Tỵ, Hàn Lộ, 28, Chẩn, Thuỷ, Thành, Kim, , 298
+16/10/2026, 23:14, Bính Ngọ, Đinh Dậu, Mậu Ngọ, Hàn Lộ, 1, Giác, Mộc, Thu, Thuỷ, , 299
+17/10/2026, 23:14, Bính Ngọ, Đinh Dậu, Kỷ Mùi, Hàn Lộ, 2, Cang, Kim, Khai, Kim, , 300
+18/10/2026, 23:14, Bính Ngọ, Đinh Dậu, Canh Thân, Hàn Lộ, 3, Đê, Thổ, Bế, Kim, , 301
+19/10/2026, 23:14, Bính Ngọ, Đinh Dậu, Tân Dậu, Hàn Lộ, 4, Phòng, Nhật, Kiến, Thổ, , 302
+20/10/2026, 23:15, Bính Ngọ, Đinh Dậu, Nhâm Tuất, Hàn Lộ, 5, Tâm, Nguyệt, Trừ, Thuỷ, , 303
+21/10/2026, 23:15, Bính Ngọ, Đinh Dậu, Quý Hợi, Hàn Lộ, 5, Vĩ, Hoả, Mãn, Thổ, , 304
+22/10/2026, 23:15, Bính Ngọ, Đinh Dậu, Quý Hợi, Hàn Lộ, 6, Vĩ, Hoả, Mãn, Thổ, , 305
+23/10/2026, 23:15, Bính Ngọ, Mậu Tuất, Giáp Tý, Sương Giáng, 7, Cơ, Thuỷ, Mãn, Thổ, , 306
+24/10/2026, 23:15, Bính Ngọ, Mậu Tuất, Ất Sửu, Sương Giáng, 8, Đẩu, Mộc, Bình, Thuỷ, Kỵ Lập Trạch, 307
+25/10/2026, 23:15, Bính Ngọ, Mậu Tuất, Bính Dần, Sương Giáng, 9, Ngưu, Kim, Định, Mộc, , 308
+26/10/2026, 23:15, Bính Ngọ, Mậu Tuất, Đinh Mão, Sương Giáng, 10, Nữ, Thổ, Chấp, Hoả, Kỵ Lập Trạch, 309
+27/10/2026, 23:16, Bính Ngọ, Mậu Tuất, Mậu Thìn, Sương Giáng, 11, Hư, Nhật, Phá, Hoả, Kỵ Lập Trạch, 310
+28/10/2026, 23:16, Bính Ngọ, Mậu Tuất, Kỷ Tỵ, Sương Giáng, 12, Nguy, Nguyệt, Nguy, Thuỷ, , 311
+29/10/2026, 23:16, Bính Ngọ, Mậu Tuất, Canh Ngọ, Sương Giáng, 13, Thất, Hoả, Thành, Kim, , 312
+30/10/2026, 23:16, Bính Ngọ, Mậu Tuất, Tân Mùi, Sương Giáng, 14, Bích, Thuỷ, Thu, Thuỷ, , 313
+31/10/2026, 23:16, Bính Ngọ, Mậu Tuất, Nhâm Thân, Sương Giáng, 15, Khuê, Mộc, Khai, Kim, , 314
+01/11/2026, 23:16, Bính Ngọ, Mậu Tuất, Quý Dậu, Sương Giáng, 16, Lâu, Kim, Bế, Kim, , 315
+02/11/2026, 23:16, Bính Ngọ, Mậu Tuất, Giáp Tuất, Sương Giáng, 17, Vị, Thổ, Kiến, Thổ, , 316
+03/11/2026, 23:16, Bính Ngọ, Mậu Tuất, Ất Hợi, Sương Giáng, 18, Mão, Nhật, Trừ, Thuỷ, , 317
+04/11/2026, 23:16, Bính Ngọ, Mậu Tuất, Bính Tý, Sương Giáng, 19, Tất, Nguyệt, Mãn, Thổ, , 318
+05/11/2026, 23:16, Bính Ngọ, Mậu Tuất, Đinh Sửu, Sương Giáng, 20, Chủy, Hoả, Bình, Thuỷ, , 319
+06/11/2026, 23:16, Bính Ngọ, Mậu Tuất, Mậu Dần, Sương Giáng, 21, Sâm, Thuỷ, Định, Mộc, , 320
+07/11/2026, 23:16, Bính Ngọ, Mậu Tuất, Kỷ Mão, Lập Đông, 22, Tỉnh, Mộc, Chấp, Hoả, , 321
+08/11/2026, 23:16, Bính Ngọ, Mậu Tuất, Canh Thìn, Lập Đông, 23, Quỷ, Kim, Phá, Hoả, Đại Hung, 322
+09/11/2026, 23:16, Bính Ngọ, Mậu Tuất, Tân Tỵ, Lập Đông, 24, Liễu, Thổ, Nguy, Thuỷ, , 323
+10/11/2026, 23:16, Bính Ngọ, Mậu Tuất, Nhâm Ngọ, Lập Đông, 25, Tinh, Nhật, Thành, Kim, , 324
+11/11/2026, 23:15, Bính Ngọ, Mậu Tuất, Quý Mùi, Lập Đông, 26, Trương, Nguyệt, Thu, Thuỷ, , 325
+12/11/2026, 23:15, Bính Ngọ, Mậu Tuất, Giáp Thân, Lập Đông, 27, Dực, Hoả, Khai, Kim, , 326
+13/11/2026, 23:15, Bính Ngọ, Mậu Tuất, Ất Dậu, Lập Đông, 28, Chẩn, Thuỷ, Bế, Kim, , 327
+14/11/2026, 23:15, Bính Ngọ, Mậu Tuất, Bính Tuất, Lập Đông, 1, Giác, Mộc, Kiến, Thổ, , 328
+15/11/2026, 23:15, Bính Ngọ, Mậu Tuất, Đinh Hợi, Lập Đông, 2, Cang, Kim, Trừ, Thuỷ, , 329
+16/11/2026, 23:15, Bính Ngọ, Mậu Tuất, Mậu Tý, Lập Đông, 3, Đê, Thổ, Mãn, Thổ, , 330
+17/11/2026, 23:14, Bính Ngọ, Mậu Tuất, Kỷ Sửu, Lập Đông, 4, Phòng, Nhật, Bình, Thuỷ, , 331
+18/11/2026, 23:14, Bính Ngọ, Mậu Tuất, Canh Dần, Lập Đông, 5, Tâm, Nguyệt, Định, Mộc, , 332
+19/11/2026, 23:14, Bính Ngọ, Mậu Tuất, Tân Mão, Lập Đông, 6, Vĩ, Hoả, Chấp, Hoả, , 333
+20/11/2026, 23:14, Bính Ngọ, Mậu Tuất, Nhâm Thìn, Lập Đông, 7, Cơ, Thuỷ, Phá, Hoả, , 334
+21/11/2026, 23:14, Bính Ngọ, Mậu Tuất, Quý Tỵ, Lập Đông, 8, Đẩu, Mộc, Nguy, Thuỷ, Kỵ Lập Trạch, 335
+22/11/2026, 23:13, Bính Ngọ, Kỷ Hợi, Giáp Ngọ, Tiểu Tuyết, 9, Ngưu, Kim, Nguy, Thuỷ, , 336
+23/11/2026, 23:13, Bính Ngọ, Kỷ Hợi, Ất Mùi, Tiểu Tuyết, 10, Nữ, Thổ, Thành, Kim, Kỵ Lập Trạch, 337
+24/11/2026, 23:13, Bính Ngọ, Kỷ Hợi, Bính Thân, Tiểu Tuyết, 11, Hư, Nhật, Thu, Thuỷ, Kỵ Lập Trạch, 338
+25/11/2026, 23:12, Bính Ngọ, Kỷ Hợi, Đinh Dậu, Tiểu Tuyết, 12, Nguy, Nguyệt, Khai, Kim, , 339
+26/11/2026, 23:12, Bính Ngọ, Kỷ Hợi, Mậu Tuất, Tiểu Tuyết, 13, Thất, Hoả, Bế, Kim, , 340
+27/11/2026, 23:12, Bính Ngọ, Kỷ Hợi, Kỷ Hợi, Tiểu Tuyết, 14, Bích, Thuỷ, Kiến, Thổ, , 341
+28/11/2026, 23:12, Bính Ngọ, Kỷ Hợi, Canh Tý, Tiểu Tuyết, 15, Khuê, Mộc, Trừ, Thuỷ, , 342
+29/11/2026, 23:11, Bính Ngọ, Kỷ Hợi, Tân Sửu, Tiểu Tuyết, 16, Lâu, Kim, Mãn, Thổ, , 343
+30/11/2026, 23:11, Bính Ngọ, Kỷ Hợi, Nhâm Dần, Tiểu Tuyết, 17, Vị, Thổ, Bình, Thuỷ, , 344
+01/12/2026, 23:10, Bính Ngọ, Kỷ Hợi, Quý Mão, Tiểu Tuyết, 18, Mão, Nhật, Định, Mộc, , 345
+02/12/2026, 23:10, Bính Ngọ, Kỷ Hợi, Giáp Thìn, Tiểu Tuyết, 19, Tất, Nguyệt, Chấp, Hoả, Kỵ Lập Trạch, 346
+03/12/2026, 23:10, Bính Ngọ, Kỷ Hợi, Ất Tỵ, Tiểu Tuyết, 20, Chủy, Hoả, Phá, Hoả, Kỵ Lập Trạch, 347
+04/12/2026, 23:09, Bính Ngọ, Kỷ Hợi, Bính Ngọ, Tiểu Tuyết, 21, Sâm, Thuỷ, Nguy, Thuỷ, Kỵ Lập Trạch, 348
+05/12/2026, 23:09, Bính Ngọ, Kỷ Hợi, Đinh Mùi, Tiểu Tuyết, 22, Tỉnh, Mộc, Thành, Kim, Kỵ Lập Trạch, 349
+06/12/2026, 23:08, Bính Ngọ, Kỷ Hợi, Mậu Thân, Tiểu Tuyết, 23, Quỷ, Kim, Thu, Thuỷ, Kỵ Lập Trạch, 350
+07/12/2026, 23:08, Bính Ngọ, Kỷ Hợi, Kỷ Dậu, Đại Tuyết, 24, Liễu, Thổ, Khai, Kim, Kỵ Lập Trạch, 351
+08/12/2026, 23:08, Bính Ngọ, Kỷ Hợi, Canh Tuất, Đại Tuyết, 25, Tinh, Nhật, Bế, Kim, Kỵ Lập Trạch, 352
+09/12/2026, 23:07, Bính Ngọ, Kỷ Hợi, Tân Hợi, Đại Tuyết, 26, Trương, Nguyệt, Kiến, Thổ, Kỵ Lập Trạch, 353
+10/12/2026, 23:07, Bính Ngọ, Kỷ Hợi, Nhâm Tý, Đại Tuyết, 27, Dực, Hoả, Trừ, Thuỷ, Kỵ Lập Trạch, 354
+11/12/2026, 23:06, Bính Ngọ, Kỷ Hợi, Quý Sửu, Đại Tuyết, 28, Chẩn, Thuỷ, Mãn, Thổ, Kỵ Lập Trạch, 355
+12/12/2026, 23:06, Bính Ngọ, Kỷ Hợi, Giáp Dần, Đại Tuyết, 1, Giác, Mộc, Bình, Thuỷ, Kỵ Lập Trạch, 356
+13/12/2026, 23:05, Bính Ngọ, Kỷ Hợi, Ất Mão, Đại Tuyết, 2, Cang, Kim, Định, Mộc, Kỵ Lập Trạch, 357
+14/12/2026, 23:05, Bính Ngọ, Kỷ Hợi, Bính Thìn, Đại Tuyết, 3, Đê, Thổ, Chấp, Hoả, Kỵ Lập Trạch, 358
+15/12/2026, 23:04, Bính Ngọ, Kỷ Hợi, Đinh Tỵ, Đại Tuyết, 4, Phòng, Nhật, Phá, Hoả, Kỵ Lập Trạch, 359
+16/12/2026, 23:04, Bính Ngọ, Kỷ Hợi, Mậu Ngọ, Đại Tuyết, 5, Tâm, Nguyệt, Nguy, Thuỷ, Kỵ Lập Trạch, 360
+17/12/2026, 23:03, Bính Ngọ, Kỷ Hợi, Kỷ Mùi, Đại Tuyết, 6, Vĩ, Hoả, Thành, Kim, Kỵ Lập Trạch, 361
+18/12/2026, 23:03, Bính Ngọ, Kỷ Hợi, Canh Thân, Đại Tuyết, 7, Cơ, Thuỷ, Thu, Thuỷ, Kỵ Lập Trạch, 362
+19/12/2026, 23:02, Bính Ngọ, Kỷ Hợi, Tân Dậu, Đại Tuyết, 8, Đẩu, Mộc, Khai, Kim, Kỵ Lập Trạch, 363
+20/12/2026, 23:02, Bính Ngọ, Kỷ Hợi, Nhâm Tuất, Đại Tuyết, 9, Ngưu, Kim, Bế, Kim, Kỵ Lập Trạch, 364
+21/12/2026, 23:01, Bính Ngọ, Kỷ Hợi, Quý Hợi, Đại Tuyết, 10, Nữ, Thổ, Kiến, Thổ, Kỵ Lập Trạch, 365
+22/12/2026, 23:01, Bính Ngọ, Kỷ Hợi, Quý Hợi, Đại Tuyết, 10, Nữ, Thổ, Kiến, Thổ, Kỵ Lập Trạch, 366
