@@ -881,7 +881,7 @@ def he_thong_kiem_duyet_ngay_toan_dien(ngay_dl_chon, thang_cc, nam_cc, content, 
 
     # --- TỔNG KẾT PHÁN QUYẾT (CẬP NHẬT LUẬT BÙ TRỪ) ---
     #st.divider()
-    st.markdown("### 🚩 PHÁN QUYẾT TỔNG THỂ")
+    st.markdown("🚩 **PHÁN QUYẾT TỔNG THỂ**")
 
     if co_loi_nang:
         st.error(f"⚠️ Ngày PHẠM {res_cc['ngay_pham']}. **KHÔNG NÊN DÙNG:** Cát không bù được Hung cấp độ Đại Kỵ (cho dù có gặp Tam Kỳ cũng khó hoá giải nổi). Nếu Ngày dụng sự không tránh được, nên chọn ưu tiên Giờ Quý Nhân, kế là Giờ Hoàng Đạo mà không phạm Cùng Cực hay Triệt Không mới giảm thiểu Hung sát gây ra")
