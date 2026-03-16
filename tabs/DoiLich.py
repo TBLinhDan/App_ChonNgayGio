@@ -79,43 +79,7 @@ def DoiLich():
                                 )
   #st.write(tinh_thanh_chon)
  
-  # Định nghĩa màu sắc vàng đồng theo phong cách Kinh Dịch/Tử Vi
-  style_nut_vang_dong = """
-                          <style>
-                            div.stButton > button:first-child {
-                                background-color: #D4AF37; /* Màu vàng đồng (Gold) */
-                                color: #000000;            /* Màu chữ đen cho rõ nét */
-                                font-weight: bold;         /* Chữ in đậm */
-                                border-radius: 10px;        /* Bo góc nhẹ */
-                                border: 2px solid #B8860B; /* Viền vàng đậm hơn */
-                                width: 35%;               /* Nút dài hết khung (tùy chọn) */
-                                height: 2.5em;               /* Độ cao của nút */
-                                transition: all 0.3s;      /* Hiệu ứng mượt mà */
-                            }
-
-                            /* Hiệu ứng khi đưa chuột vào (Hover) */
-                            div.stButton > button:first-child:hover {
-                                background-color: #FFD700; /* Vàng sáng hơn */
-                                color: #000000;
-                                border: 1px solid #D4AF37;
-                                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Tạo đổ bóng */
-                            }
-                            
-                            /* Hiệu ứng khi nhấn vào (Active) */
-                            div.stButton > button:first-child:active {
-                                transform: scale(0.98);    /* Nhấn lún xuống một chút */
-                            }
-                        </style>
-                        """
-
-  # Chèn CSS vào ứng dụng
-  st.markdown(style_nut_vang_dong, unsafe_allow_html=True)
-
-  # Tạo nút bấm
-  if st.button("CHUYỂN ĐỔI"):
-    #st.write("🔄 Đang tiến hành tính toán...")
-
-  #if st.button("CHUYỂN ĐỔI", type="primary"):
+  if st.button("CHUYỂN ĐỔI", type="primary"):
     stt = stt_ngay(ngay_cantinh, thang_cantinh, nam_cantinh)
     #st.write("stt_ngày: ", stt)
     if stt == 0:
