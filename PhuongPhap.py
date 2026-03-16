@@ -712,7 +712,10 @@ def he_thong_kiem_duyet_ngay_toan_dien(ngay_dl_chon, thang_cc, nam_cc, content, 
     loi_tlkv = chi_ngay in kv_tuan or chi_ngay in tl_can
     
     # Kiểm tra Hoàng Đạo/Hắc Đạo (Hàm giả định dựa trên bảng tra của bạn)
-    is_hoang_dao = info_ngay.get("is_hoang_dao", False) 
+    danh_sach_sao_cat = info_ngay.get("cat", [])
+    # Kiểm tra xem có chữ "Hoàng Đạo" trong bất kỳ phần tử nào của danh sách cat không
+    is_hoang_dao = any("Hoàng Đạo" in sao for sao in danh_sach_sao_cat)
+    #st.write(is_hoang_dao) # Kết quả sẽ trả về True nếu có "Hoàng Đạo (Thanh Long)" 
     
     # Lấy thông tin Tam Kỳ để tính toán bù trừ sớm
     res_tk = kiem_tra_ngay_hien_tai_co_ky(ngay_dl_chon, ngay_tot_tk)
