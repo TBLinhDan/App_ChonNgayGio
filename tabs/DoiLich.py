@@ -42,7 +42,7 @@ from PhuongPhap import he_thong_kiem_duyet_ngay_toan_dien
 
 
 def DoiLich():
-  st.subheader("CAN CHI Kim Cang Lịch")
+  st.subheader("Kim Cang CAN CHI Lịch")
   st.markdown('<span style="color: darkgreen; font-size: 20px;">**Năm BÍNH NGỌ_2026**</span>', unsafe_allow_html=True)
   st.markdown('<span style="color: darkgreen; font-size: 18px;">**[22/12/2025 - 22/12/2026]**</span>', unsafe_allow_html=True)
   st.subheader("📊 Phân tích Khí Vận")
