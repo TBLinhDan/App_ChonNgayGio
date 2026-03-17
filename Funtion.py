@@ -811,7 +811,7 @@ def nhap_CanChi_ngaysinh():
         # Nút TIẾP TỤC xử lý bằng logic reset trạng thái
         if st.button("**TIẾP TỤC**"):
             st.balloons()
-            st.warning("**Hẹn gặp lại Bạn ở phiên bản nâng cấp**\n\n **XIN CẢM ƠN !!!**")
+            st.warning("**Sau khi xem xét bản chất của Thời gian và Không gian, dùng bộ lọc vũ trụ để tìm ra những Ngày/Giờ có năng lượng tự nhiên nguyên thủy tốt nhất, loại bỏ sát khí vĩ mô. Ta mới đặt con người (Nhân) vào trong mối quan hệ tương tác sinh khắc, xem Nhân Mệnh có khả năng hấp thụ thời cơ đó hay không. Khí của tự nhiên (Trực Ngày) nằm trong sự kiểm soát dịch chuyển thời gian của Thiên Trực cùng định vị không gian Địa Trực và Khí của con người (Nhân Trực) đồng thanh tương ứng, đồng khí tương cầu thì vạn sự tất thành. Hẹn gặp lại Bạn ở phiên bản nâng cấp**\n\n **XIN CẢM ƠN !!!**")
             # Tùy chọn: st.session_state.show_answer = False (để đóng lại sau khi cảm ơn)
 
     return nhap_canngaysinh, nhap_chingaysinh
