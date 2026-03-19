@@ -361,7 +361,7 @@ def tinh_can_ngay (stt_ngày):
         can_idx = (stt - 1) % 10
         chi_idx = (stt - 1) % 12
         lst_Can = ['Giáp', 'Ất', 'Bính', 'Đinh', 'Mậu', 'Kỷ', 'Canh', 'Tân', 'Nhâm', 'Quý']    
-        lst_Chi = ['Tý', 'Sửu', 'Dần', 'Mão', 'Thìn', 'Tị', 'Ngọ', 'Mùi', 'Thân', 'Dậu', 'Tuất', 'Hợi']
+        lst_Chi = ['Tý', 'Sửu', 'Dần', 'Mão', 'Thìn', 'Tỵ', 'Ngọ', 'Mùi', 'Thân', 'Dậu', 'Tuất', 'Hợi']
         ngay_can_chi = f"{lst_Can[can_idx]} {lst_Chi[chi_idx]}"
         st.write(f"\nNgày {ngay_cantinh}: {ngay_can_chi}")
         can = lst_Can[can_idx]
@@ -374,7 +374,7 @@ def stt_CanChi(stt):
         can_idx = (stt - 1) % 10
         chi_idx = (stt - 1) % 12
         lst_Can = ['Giáp', 'Ất', 'Bính', 'Đinh', 'Mậu', 'Kỷ', 'Canh', 'Tân', 'Nhâm', 'Quý']    
-        lst_Chi = ['Tý', 'Sửu', 'Dần', 'Mão', 'Thìn', 'Tị', 'Ngọ', 'Mùi', 'Thân', 'Dậu', 'Tuất', 'Hợi']
+        lst_Chi = ['Tý', 'Sửu', 'Dần', 'Mão', 'Thìn', 'Tỵ', 'Ngọ', 'Mùi', 'Thân', 'Dậu', 'Tuất', 'Hợi']
         can_chi = f"{lst_Can[can_idx]} {lst_Chi[chi_idx]}"
     elif stt == 61 or stt == 0: # Trường hợp đặc biệt cuối chu kỳ
         can_chi == "Quý Hợi"
