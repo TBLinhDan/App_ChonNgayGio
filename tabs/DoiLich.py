@@ -38,11 +38,15 @@ from PhuongPhap import hop_nhat_lich_thang
 from PhuongPhap import display_unified_calendar
 from PhuongPhap import tinh_gio_quy_nhan_dang_thien_mon
 from PhuongPhap import he_thong_kiem_duyet_ngay_toan_dien
-
+from Funtion import hien_thi_nội_dung_file_expander
 
 
 def DoiLich():
-  st.subheader("CAN CHI Kim Cang Lịch")
+
+  # 1. Đặt mỏ neo ở ngay đầu trang
+  st.markdown("<div id='top'></div>", unsafe_allow_html=True)
+
+  st.subheader("Kim Cang CAN CHI Lịch")
   st.markdown('<span style="color: darkgreen; font-size: 20px;">**Năm BÍNH NGỌ_2026**</span>', unsafe_allow_html=True)
   st.markdown('<span style="color: darkgreen; font-size: 18px;">**[22/12/2025 - 22/12/2026]**</span>', unsafe_allow_html=True)
   st.subheader("📊 Phân tích Khí Vận")
@@ -79,43 +83,7 @@ def DoiLich():
                                 )
   #st.write(tinh_thanh_chon)
  
-  # Định nghĩa màu sắc vàng đồng theo phong cách Kinh Dịch/Tử Vi
-  style_nut_vang_dong = """
-                          <style>
-                            div.stButton > button:first-child {
-                                background-color: #D4AF37; /* Màu vàng đồng (Gold) */
-                                color: #000000;            /* Màu chữ đen cho rõ nét */
-                                font-weight: bold;         /* Chữ in đậm */
-                                border-radius: 10px;        /* Bo góc nhẹ */
-                                border: 2px solid #B8860B; /* Viền vàng đậm hơn */
-                                width: 35%;               /* Nút dài hết khung (tùy chọn) */
-                                height: 2.5em;               /* Độ cao của nút */
-                                transition: all 0.3s;      /* Hiệu ứng mượt mà */
-                            }
-
-                            /* Hiệu ứng khi đưa chuột vào (Hover) */
-                            div.stButton > button:first-child:hover {
-                                background-color: #FFD700; /* Vàng sáng hơn */
-                                color: #000000;
-                                border: 1px solid #D4AF37;
-                                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Tạo đổ bóng */
-                            }
-                            
-                            /* Hiệu ứng khi nhấn vào (Active) */
-                            div.stButton > button:first-child:active {
-                                transform: scale(0.98);    /* Nhấn lún xuống một chút */
-                            }
-                        </style>
-                        """
-
-  # Chèn CSS vào ứng dụng
-  st.markdown(style_nut_vang_dong, unsafe_allow_html=True)
-
-  # Tạo nút bấm
-  if st.button("CHUYỂN ĐỔI"):
-    #st.write("🔄 Đang tiến hành tính toán...")
-
-  #if st.button("CHUYỂN ĐỔI", type="primary"):
+  if st.button("CHUYỂN ĐỔI", type="primary"):
     stt = stt_ngay(ngay_cantinh, thang_cantinh, nam_cantinh)
     #st.write("stt_ngày: ", stt)
     if stt == 0:
@@ -151,6 +119,7 @@ def DoiLich():
       stt = stt_ngay(ngay_cantinh, thang_cantinh, nam_cantinh)
       #st.write("stt_ngày: ", stt)
       ngayCanChi= stt_CanChi(stt)
+      st.write(ngayCanChi)
       #st.write(f"Ngày {ngay_cantinh:02d}: {ngayCanChi}")
       can_ngay = lay_thien_can(ngayCanChi)
       #st.write(can)
@@ -333,7 +302,24 @@ def DoiLich():
       st.session_state.phut_cantinh = phut_cantinh
       st.session_state.gio_can_chi_thuc = gio_can_chi_thuc
 
-
+  st.markdown("""
+    <style>
+    .floating-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: brown;
+        color: white !important;
+        padding: 10px 15px;
+        border-radius: 50px;
+        text-decoration: none;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        z-index: 1000;
+        font-weight: bold;
+    }
+    </style>
+    <a href="#top" class="floating-button">⬆️ Đầu trang</a>
+    """, unsafe_allow_html=True)
 
 if __name__ == "__DoiLich__":
   DoiLich()

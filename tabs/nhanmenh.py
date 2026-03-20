@@ -4,22 +4,27 @@ from nam import year # Từ file nam.py gọi hàm year(2026) chuyển đổi sa
 from thang import stt_thangam
 from thang import stt_ngay
 from thang import tiet_khi
+from thang import lay_thien_can
+from thang import lay_dia_chi
 from Funtion import doc_file2
 from Funtion import doc_file
 from Funtion import path_data
 from Funtion import lay_thong_tin
 from Funtion import nhap_CanChi_ngaysinh
+#from Funtion import nhap_CanChi_ngaysinh
+from Funtion import hien_thi_thong_tin_expander
 from PhuongPhap import tab_moi_su_dung_bien
-from thang import lay_thien_can
-from thang import lay_dia_chi
-
+#from PhuongPhap import 
 
 
 def NhanMenh_trong_Thoivan():
     
+    st.markdown('<span style="color: darkred; font-size: 20px;">**NHÂN MỆNH với NGÀY/GIỜ**</span>', unsafe_allow_html=True)
+
     tab_moi_su_dung_bien()
     
     content = st.session_state.content 
+    #st.write(content)
     lich_tong_hop = st.session_state.lich_tong_hop
     ngay_tot = st.session_state.tam_ky_data
     nam_canchi = st.session_state.nam_ht
@@ -44,26 +49,22 @@ def NhanMenh_trong_Thoivan():
     st.info("HỆ THỐNG KIỂM ĐỊNH KHÍ VẬN cho Ngày Hiện Tại. Vui lòng Mở Xem chi tiết ở Tab trước.")
     st.divider()
 
-    st.write("**Thông tin THAM KHẢO chung Hôm Nay:**")
+    st.write(f"Thông tin **Sao, Trực** ngày **{ngayCanChi}:**")
 
-    thongtin_sao = lay_thong_tin(sao_ngay, "28Sao")
-    st.write(f"Ngày **{ngayCanChi}** có {thongtin_sao[1]}")
+    hien_thi_thong_tin_expander(sao_ngay, "28Sao", "Sao")
 
-    thongtin_truc = lay_thong_tin(truc_ngay, "12Truc")
-    st.write(f"Ngày **{ngayCanChi}** có {thongtin_truc[1]}")
+    hien_thi_thong_tin_expander(truc_ngay, "12Truc", "Trực")
+    
 
     canngay_ht = lay_thien_can(ngayCanChi)
-    #chingay_ht = lay_dia_chi(ngayCanChi)
     thongtin_canngay = lay_thong_tin(canngay_ht, "ViecPhuhop_CanNgay")
     st.write(f"Ngày **{canngay_ht}** _ {thongtin_canngay[1]}")
 
     st.divider()
     st.markdown('<span style="color: darkgreen; font-size: 20px;">**👤 THỜI VẬN Tác Động CÁ NHÂN?**</span>', unsafe_allow_html=True)
 
-    nhap_CanChi = nhap_CanChi_ngaysinh()
-    #st.write(nhap_CanChi)
-    nhap_canngaysinh = nhap_CanChi[0]
-    nhap_chingaysinh = nhap_CanChi[1]
+    nhap_CanChi_ngaysinh(nam_canchi, thang_canchi, ngayCanChi)
+    
 
     """
     if st.button("**TIẾP TỤC**"):

@@ -1,4 +1,4 @@
-1.
+1. KIỂM TRA KHÍ CÙNG CỰC
 
 def kiem_tra_cung_cuc_ngay_hien_tai(nam_canchi, thang_canchi, ngay_canchi):
     """
@@ -85,7 +85,7 @@ def display_cung_cuc_ngay_hien_tai(nam_canchi, thang_canchi, ngay_canchi):
         st.write(f"- Năm {nam_canchi} kỵ tháng có Can: `{', '.join(res['can_ky_thang'])}`")
         st.write(f"- Tháng {thang_canchi} kỵ ngày có Can: `{', '.join(res['can_ky_ngay'])}`")
 
-2. 
+2. TRÁNH SAO HUNG 
 
 def check_ngay_ky_sao_2026(ngay_thang_nam, content):
     
@@ -133,7 +133,7 @@ def check_ngay_ky_sao_2026(ngay_thang_nam, content):
         if "Kỵ" in res['noi_dung'] or "Sát" in res['noi_dung']:
             st.caption("🚨 Đây là ngày có chỉ số hung cao, nên thận trọng tối đa.")
 
-3. 
+3. KIỂM  TRA NGÀY HỘI TỤ KHÍ TAM KỲ
 
 def ngay_hien_tai_co_ky(ngay_thang_nam, ket_qua_ngay):
     

@@ -9,7 +9,7 @@ st.markdown("""
     <style>
     /* 1. Phóng to chữ và làm đậm cho tất cả các Tab */
     button[data-baseweb="tab"] p {
-        font-size: 16px !important;
+        font-size: 21px !important;
         font-weight: bold !important;
     }
 
@@ -37,7 +37,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Khởi tạo các Tab
-tab1, tab2, tab3 = st.tabs(["**KHÍ VẬN NGÀY/GIỜ**","**NHÂN MỆNH**","**DỊCH LÝ & TIÊU CHÍ**"])
+tab1, tab2, tab3 = st.tabs(["**KHÍ VẬN**","**NHÂN MỆNH**","**DỊCH LÝ**"])
 
 
 with tab1:
@@ -48,13 +48,21 @@ with tab1:
 with tab2:
     #st.subheader(f'**NGÀY/GIỜ TỐT ĐỐI VỚI NHÂN MỆNH**')
     #st.subheader("👤 Xem vận hạn cá nhân")
-    st.markdown('<span style="color: darkred; font-size: 20px;">**NHÂN MỆNH với NGÀY/GIỜ**</span>', unsafe_allow_html=True)
+    #st.markdown('<span style="color: darkred; font-size: 20px;">**NHÂN MỆNH với NGÀY/GIỜ**</span>', unsafe_allow_html=True)
     
     #nhanmenh.he_thong_kiem_duyet_ngay_toan_dien(ngay_thang_nam, thang_canchi, nam_canchi, content, lich_tong_hop, ngay_tot)
     nhanmenh.NhanMenh_trong_Thoivan()
 
 with tab3:
     #st.info('''Đổi Dương Lịch sang Kim Cang CAN CHI Lịch''')
-    st.subheader(f'**TIÊU CHÍ CHỌN NGÀY/GIỜ TỐT**')
-    st.markdown('<span style="color: darkblue; font-size: 20px;">**LUẬT BÙ TRỪ TƯƠNG QUAN:**</span>', unsafe_allow_html=True)
-    DoiLich.coso_phuongphaptinh()
+    st.markdown('<span style="color: darkblue; font-size: 22px;">**TIÊU CHÍ CHỌN NGÀY/GIỜ**</span>', unsafe_allow_html=True)
+    #DoiLich.coso_phuongphaptinh()
+    DoiLich.hien_thi_nội_dung_file_expander("I. LuatBuTruTuongQuan", "LUẬT BÙ TRỪ TƯƠNG QUAN:")
+    DoiLich.hien_thi_nội_dung_file_expander("I-1.TranhKhiCungCuc", "I-1. TRÁNH KHÍ CÙNG CỰC (Đại Kỵ Tuyệt Đối)")
+    DoiLich.hien_thi_nội_dung_file_expander("I-2.24NgayKy_va_SaoHung", "I-2. TRÁNH 24 NGÀY KỴ và SAO HUNG theo Nhị Thập Bát Tú")
+    DoiLich.hien_thi_nội_dung_file_expander("I-3.BatTietTamKy", "I-3. BÁT TIẾT TAM KỲ")
+    DoiLich.hien_thi_nội_dung_file_expander("I-4.VongSaoThanhLong", "I-4. VÒNG SAO THANH LONG (Ngày/Giờ Hoàng Đạo)")
+    DoiLich.hien_thi_nội_dung_file_expander("I-5.TrietLoKhongVong", "I-5. TRIỆT LỘ - KHÔNG VONG")
+    DoiLich.hien_thi_nội_dung_file_expander("I-6.GioQuyNhan", "I-6. Giờ QUÝ NHÂN ĐĂNG THIÊN MÔN")
+    DoiLich.hien_thi_nội_dung_file_expander("I-7.TinhChatNguHanhThienCan", "I-7. TÍNH CHẤT NGŨ HÀNH THIÊN CAN")
+    DoiLich.hien_thi_nội_dung_file_expander("II.TuDaiSatThoi", "II. Tránh TỨ ĐẠI SÁT THỜI Vận cá nhân")

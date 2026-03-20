@@ -1,0 +1,10 @@
+GIÁP; Kỵ các ngày Dương và Âm lịch tháng Tý, Tuất: 1, 7, 13, 19, 25.
+ẤT; Kỵ các ngày Dương và Âm lịch tháng Dậu : 2, 8, 14, 20, 26.
+BÍNH; Kỵ các ngày Dương và Âm lịch tháng Thân: 3, 9, 15, 21, 27.
+ĐINH; Kỵ các ngày Dương và Âm lịch tháng Mùi: 4, 10, 16, 22, 28.
+MẬU; Kỵ các ngày Dương và Âm lịch tháng Ngọ: 5, 11, 17, 23, 29.
+KỶ; Kỵ các ngày Dương và Âm lịch tháng Tỵ: 6, 12, 18, 24, 30. 
+CANH; Kỵ các ngày Dương và Âm lịch tháng Thìn: 7, 13, 19, 25.
+TÂN; Kỵ các ngày Dương và Âm lịch tháng Mão : 8, 14, 20, 26.
+NHÂM; Kỵ các ngày Dương và Âm lịch tháng Dần: 9, 15, 21, 27.
+QUÝ; Kỵ các ngày Dương và Âm lịch tháng Sửu, Hợi: 10, 16, 22, 28.

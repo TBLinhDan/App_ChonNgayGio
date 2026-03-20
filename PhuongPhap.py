@@ -664,6 +664,7 @@ def he_thong_kiem_duyet_ngay_toan_dien(ngay_dl_chon, thang_cc, nam_cc, content, 
     
     # 1. TRÍCH XUẤT DỮ LIỆU
     info_ngay = next((info for m, info in lich_tong_hop.items() if info["ngay_dl"] == ngay_dl_chon), None)
+    #st.write(info_ngay)
     row_goc = next((r for r in content if str(r[0]).strip() == ngay_dl_chon), None)
     
     if not info_ngay or not row_goc:
@@ -712,7 +713,12 @@ def he_thong_kiem_duyet_ngay_toan_dien(ngay_dl_chon, thang_cc, nam_cc, content, 
     loi_tlkv = chi_ngay in kv_tuan or chi_ngay in tl_can
     
     # Kiểm tra Hoàng Đạo/Hắc Đạo (Hàm giả định dựa trên bảng tra của bạn)
-    is_hoang_dao = info_ngay.get("is_hoang_dao", False) 
+    # Giả sử info_ngay là biến chứa kết quả JSON bạn đã nêu
+    danh_sach_sao_cat = info_ngay.get("cat", [])
+
+    # Kiểm tra xem có chữ "Hoàng Đạo" trong bất kỳ phần tử nào của danh sách cat không
+    is_hoang_dao = any("Hoàng Đạo" in sao for sao in danh_sach_sao_cat)
+    #st.write(is_hoang_dao) # Kết quả sẽ trả về True nếu có "Hoàng Đạo (Thanh Long)"
     
     # Lấy thông tin Tam Kỳ để tính toán bù trừ sớm
     res_tk = kiem_tra_ngay_hien_tai_co_ky(ngay_dl_chon, ngay_tot_tk)
@@ -868,24 +874,24 @@ def he_thong_kiem_duyet_ngay_toan_dien(ngay_dl_chon, thang_cc, nam_cc, content, 
                 # 2. Nếu chỉ là Giờ Hoàng Đạo (Ưu tiên 2)
                 elif is_hoang_dao:
                     if is_cung_cuc:
-                        st.warning(f"⚠️ Cẩn trọng: Giờ Hoàng Đạo phạm Khí {can_gio} (Cùng Cực). Không nên dùng.")
+                        st.warning(f"⚠️ Cẩn trọng: Giờ Hoàng Đạo phạm Khí {can_gio} (Cùng Cực). Cân nhắc kỹ.")
                     elif is_triet_lo or is_khong_vong:
                         loi_gi = "Triệt Lộ" if is_triet_lo else "Không Vong"
                         if is_triet_lo and is_khong_vong: loi_gi = "Triệt Lộ & Không Vong"
-                        st.warning(f"🚧 Cản trở: Giờ Hoàng Đạo nhưng phạm {loi_gi}. Cần Quý Nhân mới hóa giải được, nên chọn giờ khác.")
+                        st.warning(f"🚧 Cản trở: Giờ Hoàng Đạo nhưng phạm {loi_gi}. Cần Quý Nhân mới hóa giải được.")
                     else:
                         st.success("✅ Giờ Cát lành: Hoàng Đạo khí thông, dụng sự tốt.")
 
     # --- TỔNG KẾT PHÁN QUYẾT (CẬP NHẬT LUẬT BÙ TRỪ) ---
     #st.divider()
-    st.markdown("### 🚩 PHÁN QUYẾT TỔNG THỂ")
+    st.markdown("🚩 **PHÁN QUYẾT TỔNG THỂ**")
 
     if co_loi_nang:
         st.error(f"⚠️ Ngày PHẠM {res_cc['ngay_pham']}. **KHÔNG NÊN DÙNG:** Cát không bù được Hung cấp độ Đại Kỵ (cho dù có gặp Tam Kỳ cũng khó hoá giải nổi). Nếu Ngày dụng sự không tránh được, nên chọn ưu tiên Giờ Quý Nhân, kế là Giờ Hoàng Đạo mà không phạm Cùng Cực hay Triệt Không mới giảm thiểu Hung sát gây ra")
     elif not ngay_dung_duoc:
         st.error("❌ **KHÔNG NÊN DÙNG:** Ngày Phạm kỵ Tuần Triệt Không Vong/Hắc Đạo mà không có yếu tố hóa giải Tam Kỳ. Nếu không tránh được nên chọn Giờ Quý Nhân, kế là Giờ Hoàng Đạo không phạm Cùng Cực hay Triệt Không mới giảm thiểu Hung sát gây ra")
     elif ngay_dung_duoc and loi_tlkv:
-        st.warning("⚠️ **CẨN TRỌNG:** Ngày dùng được nhờ bù trừ (Tam Kỳ áp chế Triệt Không/Hắc Đạo), nhưng nên chọn giờ Cát (Qúy Nhân kế đến Hoàng Đạo) không phạm Cùng Cực, không rơi vào Triệt Lộ Không Vong ở trên.")
+        st.warning("⚠️ **CẨN TRỌNG:** Ngày dùng được nhờ bù trừ (Tam Kỳ áp chế Triệt Không/Hắc Đạo), nhưng nên chọn giờ Cát (Qúy Nhân kế đến Hoàng Đạo) không phạm Cùng Cực, không rơi vào Triệt Lộ Không Vong.")
     else:
         st.success("🌟 **THUẬN LỢI:** Ngày sạch kỵ, khí vận hanh thông. Nếu có phạm Tiểu Hung, vẫn có Cát Khánh từ Ngày Tam Kỳ hay Giờ Quý Nhân - Hoàng Đạo đủ lực áp chế")
         

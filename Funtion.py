@@ -77,19 +77,71 @@ def doc_file(duong_dan, delimiter=','):
         return None
 
 def lay_thong_tin(name, title):
-            try:
-                PATH_DATA = path_data(title)
-                du_lieu = doc_file(PATH_DATA, delimiter=';')
-                if du_lieu:
-                    for thongtin in du_lieu:
-                        if thongtin[0] == name:
-                            return thongtin
-                else:
-                    return None
-            except Exception as e:
-                st.write(f"Có lỗi xảy ra: {e}")
-                return None
+    try:
+        PATH_DATA = path_data(title)
+        du_lieu = doc_file(PATH_DATA, delimiter=';')
+        if du_lieu:
+            for thongtin in du_lieu:
+                # So khớp tên (name) ở cột đầu tiên
+                if thongtin[0].strip().upper() == name.strip().upper():
+                    return thongtin
+        return None
+    except Exception as e:
+        st.error(f"Lỗi đọc dữ liệu {title}: {e}")
+        return None
+    
 
+def hien_thi_thong_tin_expander(name, title, label_hien_thi):
+    """
+    name: Giá trị cần tìm (ví dụ: "KIẾN")
+    title: Tên file/loại dữ liệu (ví dụ: "12Truc")
+    label_hien_thi: Tiêu đề hiện trên thanh Expander
+    """
+    ket_qua = lay_thong_tin(name, title)
+    
+    if ket_qua:
+        # Tạo expander với tiêu đề tùy chỉnh
+        with st.expander(f"🔍 {label_hien_thi}: **{name}**"):
+            # Giả sử ket_qua[1] là nội dung chi tiết
+            if len(ket_qua) > 1:
+                st.write(ket_qua[1])
+            else:
+                st.write("Không có mô tả chi tiết.")
+    else:
+        st.warning(f"Không tìm thấy dữ liệu cho '{name}' trong mục {title}")
+
+
+import streamlit as st
+
+def hien_thi_nội_dung_file_expander(title, label_hien_thi):
+    """
+    title: Tên loại dữ liệu (ví dụ: "12Truc") để tạo đường dẫn file
+    label_hien_thi: Tiêu đề hiện trên thanh Expander
+    """
+    try:
+        # 1. Lấy đường dẫn file từ title
+        PATH_DATA = path_data(title)
+        
+        # 2. Đọc nội dung file
+        # Nếu file của bạn là dạng văn bản thuần (.txt), ta dùng hàm đọc text
+        # Ở đây tôi giả định bạn có một hàm 'doc_file_truc_tiep' hoặc dùng open()
+        with open(PATH_DATA, "r", encoding="utf-8") as f:
+            noi_dung = f.read()
+        
+        if noi_dung:
+            # 3. Đưa toàn bộ nội dung vào trong Expander
+            with st.expander(f"📖 **{label_hien_thi}**"):
+                # Hiển thị nội dung dạng text, giữ nguyên định dạng xuống dòng
+                st.text(noi_dung) 
+                # Hoặc dùng st.markdown(noi_dung) nếu file có định dạng markdown
+        else:
+            st.warning(f"File {title} trống.")
+            
+    except Exception as e:
+        st.error(f"Không thể đọc file {title}. Lỗi: {e}")
+
+# --- CÁCH SỬ DỤNG ---
+# hien_thi_nội_dung_file_expander("12Truc", "Chi tiết ý nghĩa 12 Trực")
 
 def doc_file(duong_dan, delimiter=';'):
     """
@@ -747,8 +799,453 @@ def coso_phuongphaptinh():
     doc_file2(path_data2)
 
 
+# THIÊN TRỰC Năm
 
-def nhap_CanChi_ngaysinh():
+def hien_thi_thien_truc_nam(nam_canchi):
+    # --- PHẦN LOGIC TÍNH TOÁN ---
+    LST_CAN = ["Giáp", "Ất", "Bính", "Đinh", "Mậu", "Kỷ", "Canh", "Tân", "Nhâm", "Quý"]
+    LST_CHI = ["Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi", "Thân", "Dậu", "Tuất", "Hợi"]
+    LST_12_TRUC = ["Kiến", "Trừ", "Mãn", "Bình", "Định", "Chấp", "Phá", "Nguy", "Thành", "Thu", "Khai", "Bế"]
+    
+    NGU_HANH_TRUC = {
+        "Kiến": "Thổ", "Trừ": "Thủy", "Mãn": "Thổ", "Bình": "Thủy",
+        "Định": "Mộc", "Chấp": "Hỏa", "Phá": "Hỏa", "Nguy": "Thủy",
+        "Thành": "Kim", "Thu": "Thủy", "Khai": "Kim", "Bế": "Kim"
+    }
+    
+    parts = nam_canchi.split()
+    can_nam = parts[0]
+    chi_nam = parts[1] # Lấy Chi của năm (Ví dụ: "Ngọ")
+    
+    duong_can = ["Giáp", "Bính", "Mậu", "Canh", "Nhâm"]
+    is_duong = can_nam in duong_can
+    huong = 1 if is_duong else -1
+    
+    mapping_truong_sinh = {
+        "Giáp": "Hợi", "Ất": "Hợi", "Bính": "Dần", "Đinh": "Dần",
+        "Mậu": "Tỵ", "Kỷ": "Tỵ", "Canh": "Tỵ", "Tân": "Tỵ",
+        "Nhâm": "Thân", "Quý": "Thân"
+    }
+    
+    chi_khoi_kien = mapping_truong_sinh.get(can_nam)
+    idx_chi_khoi = LST_CHI.index(chi_khoi_kien)
+
+    danh_sach_thien_truc_nien_han = {}
+    
+    # Duyệt để tạo danh sách 12 cung
+    for i in range(12):
+        idx_chi_hien_tai = (idx_chi_khoi + (i * huong)) % 12
+        ten_chi = LST_CHI[idx_chi_hien_tai]
+        ten_truc = LST_12_TRUC[i]
+        hanh_truc = NGU_HANH_TRUC[ten_truc]
+        
+        danh_sach_thien_truc_nien_han[ten_chi] = {
+            "truc": ten_truc,
+            "ngu_hanh": hanh_truc
+        }
+
+    # BỔ SUNG: Xác định Thiên Trực chủ của năm (tại vị trí Địa chi năm)
+    thien_truc_chu = danh_sach_thien_truc_nien_han[chi_nam]["truc"]
+    hanh_thien_truc_chu = danh_sach_thien_truc_nien_han[chi_nam]["ngu_hanh"]
+
+    # --- PHẦN GIAO DIỆN STREAMLIT ---
+    st.markdown(f"**🌀 THIÊN TRỰC (Thời Lệnh) _ Năm {nam_canchi.upper()}**")
+    
+   
+    st.info(f"Đương lệnh CAN **{can_nam}**, khởi **Kiến** tại **{chi_khoi_kien}**, vận hành {'**Thuận** (Dương)' if is_duong else '**Nghịch** (Âm)'}")
+    st.success(f"👉 Trong năm **{nam_canchi}**, Thiên Trực (Thời Lệnh_Khí trời theo Can **{can_nam}** đương lệnh) chi phối chính, hội tụ tại cung Chi Năm **{chi_nam}** là **Trực {thien_truc_chu}** (Hành {hanh_thien_truc_chu}).")
+
+    with st.expander(f"📌 Xem chi tiết phân bổ **THIÊN TRỰC** tại các cung năm **{nam_canchi}**"):
+        col_a, col_b = st.columns(2)
+        
+        # Hiển thị danh sách theo thứ tự Tý -> Hợi để dễ tra cứu
+        for i, ten_chi in enumerate(LST_CHI):
+            info = danh_sach_thien_truc_nien_han[ten_chi]
+            target_col = col_a if i < 6 else col_b
+            
+            mau_sac = {"Thổ": "brown", "Thủy": "blue", "Mộc": "green", "Hỏa": "red", "Kim": "gray"}
+            color = mau_sac.get(info['ngu_hanh'], "black")
+            
+            # Highlight cung của năm
+            is_nam_hien_tai = (ten_chi == chi_nam)
+            bg_style = "background-color: #f0f2f6; border-radius: 5px; padding: 2px;" if is_nam_hien_tai else ""
+            
+            target_col.markdown(
+                f"<div style='{bg_style}'>Cung {ten_chi}:Trực {info['truc']} "
+                f"(<span style='color:{color}; font-weight:bold;'>{info['ngu_hanh']}</span>)"
+                f"{' 🎯' if is_nam_hien_tai else ''}</div>", 
+                unsafe_allow_html=True
+            )
+        st.warning("Thiên Trực đo lường sự dịch chuyển của Thời Gian (Khí trời theo Can đương lệnh) chi phối Không Gian định vị cung của Năm")
+
+    # Trả về dữ liệu mở rộng
+    return {
+        "thien_truc_chu": thien_truc_chu,
+        "hanh_thien_truc_chu": hanh_thien_truc_chu,
+        "chi_tiet_12_cung": danh_sach_thien_truc_nien_han
+    }
+
+# ĐỊA TRỰC năm
+
+def hien_thi_dia_truc_nam(nam_canchi):
+    # --- PHẦN LOGIC TÍNH TOÁN ---
+    LST_CHI = ["Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi", "Thân", "Dậu", "Tuất", "Hợi"]
+    LST_12_TRUC = ["Kiến", "Trừ", "Mãn", "Bình", "Định", "Chấp", "Phá", "Nguy", "Thành", "Thu", "Khai", "Bế"]
+    
+    NGU_HANH_TRUC = {
+        "Kiến": "Thổ", "Trừ": "Thủy", "Mãn": "Thổ", "Bình": "Thủy",
+        "Định": "Mộc", "Chấp": "Hỏa", "Phá": "Hỏa", "Nguy": "Thủy",
+        "Thành": "Kim", "Thu": "Thủy", "Khai": "Kim", "Bế": "Kim"
+    }
+    
+    chi_nam = nam_canchi.split()[1]
+    
+    mapping_mo_cuc = {
+        "Thân": "Thìn", "Tý": "Thìn", "Thìn": "Thìn",
+        "Hợi": "Mùi", "Mão": "Mùi", "Mùi": "Mùi",
+        "Dần": "Tuất", "Ngọ": "Tuất", "Tuất": "Tuất",
+        "Tỵ": "Sửu", "Dậu": "Sửu", "Sửu": "Sửu"
+    }
+    
+    chi_khoi_kien_dia = mapping_mo_cuc.get(chi_nam)
+    idx_chi_khoi = LST_CHI.index(chi_khoi_kien_dia)
+    
+    huong = 1
+    danh_sach_dia_truc_nien_han = {}
+    
+    # Duyệt an 12 Trực
+    for i in range(12):
+        idx_chi_hien_tai = (idx_chi_khoi + i) % 12
+        ten_chi = LST_CHI[idx_chi_hien_tai]
+        ten_truc = LST_12_TRUC[i]
+        hanh_truc = NGU_HANH_TRUC[ten_truc]
+        
+        danh_sach_dia_truc_nien_han[ten_chi] = {
+            "truc": ten_truc,
+            "ngu_hanh": hanh_truc
+        }
+
+    # BỔ SUNG: Xác định Địa Trực chủ của năm (tại vị trí Địa chi năm)
+    dia_truc_chu = danh_sach_dia_truc_nien_han[chi_nam]["truc"]
+    hanh_dia_truc_chu = danh_sach_dia_truc_nien_han[chi_nam]["ngu_hanh"]
+
+    # --- PHẦN GIAO DIỆN STREAMLIT ---
+    st.markdown(f"**🧱 ĐỊA TRỰC (Cục Đất) _ Năm {nam_canchi.upper()}**")
+    
+    # Hiển thị kết quả then chốt của Địa Trực
+    
+    st.info(f"Chi năm **{chi_nam}** thuộc Tam hợp cục có **Mộ** tại **{chi_khoi_kien_dia}**. Địa Trực khởi **Kiến** cố định tại **{chi_khoi_kien_dia}**, vận hành **Thuận**.")
+    st.success(f"👉 Tại Không Gian cung **{chi_nam}**, Địa Trực là **Trực {dia_truc_chu}** (Hành {hanh_dia_truc_chu}).")
+
+    with st.expander(f"📌 Xem chi tiết phân bổ **ĐỊA TRỰC** tại các cung năm **{nam_canchi}**"):
+        
+        col_a, col_b = st.columns(2)
+        
+        # Hiển thị theo thứ tự Tý -> Hợi để người dùng dễ quan sát
+        for i, chi_ten in enumerate(LST_CHI):
+            info = danh_sach_dia_truc_nien_han[chi_ten]
+            target_col = col_a if i < 6 else col_b
+            
+            mau_sac = {"Thổ": "brown", "Thủy": "blue", "Mộc": "green", "Hỏa": "red", "Kim": "gray"}
+            color = mau_sac.get(info['ngu_hanh'], "black")
+            
+            # Highlight cung của năm
+            is_cung_nam = (chi_ten == chi_nam)
+            style_box = "background-color: #fdf2e9; border-left: 5px solid brown; padding-left: 5px;" if is_cung_nam else ""
+            
+            target_col.markdown(
+                f"<div style='{style_box}'>Cung {chi_ten}: Trực {info['truc']} "
+                f"(<span style='color:{color}; font-weight:bold;'>{info['ngu_hanh']}</span>)"
+                f"{' 🎯' if is_cung_nam else ''}</div>", 
+                unsafe_allow_html=True
+            )
+        st.warning("Địa Trực định vị Không Gian (cục đất và mạch đất). Địa Trực đại diện cho tính chất cố định của Không Gian các cung")
+
+    # Trả về dữ liệu mở rộng để dễ dàng truy xuất từ session_state
+    return {
+        "dia_truc_chu": dia_truc_chu,
+        "hanh_dia_truc_chu": hanh_dia_truc_chu,
+        "chi_tiet_12_cung": danh_sach_dia_truc_nien_han
+    }
+
+
+#NHÂN TRỰC theo Ngày Sinh
+def lay_hanh_va_cuc_nhan_truc(can_chi):
+    # Chuẩn hóa input
+    parts = can_chi.upper().split()
+    if len(parts) < 2: return "Mộc", "Mộc"
+    can, chi = parts[0], parts[1]
+    
+    # 1. BẢNG CHỈ SỐ CHUẨN ĐỂ TÍNH NẠP ÂM
+    # Giáp-Ất:1, Bính-Đinh:2, Mậu-Kỷ:3, Canh-Tân:4, Nhâm-Quý:5
+    dict_can = {
+        "GIÁP": 1, "ẤT": 1, 
+        "BÍNH": 2, "ĐINH": 2, 
+        "MẬU": 3, "KỶ": 3, 
+        "CANH": 4, "TÂN": 4, 
+        "NHÂM": 5, "QUÝ": 5
+    }
+    
+    # Tý-Sửu-Ngọ-Mùi:0, Dần-Mão-Thân-Dậu:1, Thìn-Tỵ-Tuất-Hợi:2
+    dict_chi = {
+        "TÝ": 0, "SỬU": 0, "NGỌ": 0, "MÙI": 0, 
+        "DẦN": 1, "MÃO": 1, "THÂN": 1, "DẬU": 1, 
+        "THÌN": 2, "TỴ": 2, "TUẤT": 2, "HỢI": 2
+    }
+    
+    # Tính tổng Can + Chi
+    chi_val = dict_chi.get(chi, 0)
+    can_val = dict_can.get(can, 0)
+    tong = can_val + chi_val
+    
+    # Nếu tổng lớn hơn 5 thì trừ đi 5
+    if tong > 5: tong -= 5
+    
+    # 1 Kim, 2 Thủy, 3 Hỏa, 4 Thổ, 5 Mộc
+    mapping_hanh = {1: "Kim", 2: "Thủy", 3: "Hỏa", 4: "Thổ", 5: "Mộc"}
+    hanh = mapping_hanh.get(tong, "Mộc")
+    
+    # 2. Xác định Tam hợp Cục (để Thổ mượn Trực Kiến) - Giữ nguyên logic cũ vì đã đúng
+    if chi in ["THÂN", "TÝ", "THÌN"]: cuc = "Thủy"
+    elif chi in ["HỢI", "MÃO", "MÙI"]: cuc = "Mộc"
+    elif chi in ["DẦN", "NGỌ", "TUẤT"]: cuc = "Hỏa"
+    else: cuc = "Kim" # Tỵ - Dậu - Sửu
+    
+    return hanh, cuc
+
+def hien_thi_nhan_truc_ngay(canchi_input, gioi_tinh="Nam"):
+    # --- PHẦN LOGIC TÍNH TOÁN ---
+    LST_CHI = ["TÝ", "SỬU", "DẦN", "MÃO", "THÌN", "TỴ", "NGỌ", "MÙI", "THÂN", "DẬU", "TUẤT", "HỢI"]
+    LST_12_TRUC = ["Kiến", "Trừ", "Mãn", "Bình", "Định", "Chấp", "Phá", "Nguy", "Thành", "Thu", "Khai", "Bế"]
+    
+    NGU_HANH_TRUC = {
+        "Kiến": "Thổ", "Trừ": "Thủy", "Mãn": "Thổ", "Bình": "Thủy",
+        "Định": "Mộc", "Chấp": "Hỏa", "Phá": "Hỏa", "Nguy": "Thủy",
+        "Thành": "Kim", "Thu": "Thủy", "Khai": "Kim", "Bế": "Kim"
+    }
+
+    # 1. Xác định hành Nạp Âm và Cục tương ứng (Sử dụng hàm lay_hanh_va_cuc_nhan_truc đã có)
+    hanh_nap_am, cuc_muon = lay_hanh_va_cuc_nhan_truc(canchi_input)
+    chi_ban_menh = canchi_input.upper().split()[1] # Lấy Chi (ví dụ: THÂN)
+    
+    # 2. Xác định điểm khởi Kiến (Nguyên lý: Mộ thuận 6 bước)
+    mapping_mo = {"Thủy": "THÌN", "Mộc": "MÙI", "Hỏa": "TUẤT", "Kim": "SỬU"}
+    hanh_tinh_mo = cuc_muon if hanh_nap_am == "Thổ" else hanh_nap_am
+    chi_mo = mapping_mo.get(hanh_tinh_mo)
+    
+    idx_mo = LST_CHI.index(chi_mo)
+    idx_khoi_kien = (idx_mo + 6) % 12 
+    chi_khoi_kien = LST_CHI[idx_khoi_kien]
+    
+    # 3. Chiều vận hành: Nam thuận (1), Nữ nghịch (-1)
+    huong = 1 if gioi_tinh == "Nam" else -1
+    
+    # Dictionary lưu trữ toàn bộ hệ thống
+    danh_sach_chi_tiet = {}
+    
+    # Biến lưu trữ kết quả "Nhân Trực chủ" của bản mệnh
+    nhan_truc_chu = ""
+    hanh_nhan_truc_chu = ""
+
+    # Duyệt để tạo danh sách và tìm Nhân Trực tại cung bản mệnh
+    for i in range(12):
+        idx_curr = (idx_khoi_kien + (i * huong)) % 12
+        ten_chi = LST_CHI[idx_curr]
+        ten_truc = LST_12_TRUC[i]
+        hanh_t = NGU_HANH_TRUC[ten_truc]
+        
+        danh_sach_chi_tiet[ten_chi] = {
+            "truc": ten_truc,
+            "ngu_hanh": hanh_t
+        }
+        
+        # Nếu cung đang duyệt trùng với Chi của Can Chi nhập vào -> Đó là Nhân Trực chủ
+        if ten_chi == chi_ban_menh:
+            nhan_truc_chu = ten_truc
+            hanh_nhan_truc_chu = hanh_t
+
+    # --- PHẦN GIAO DIỆN STREAMLIT ---
+    st.markdown(f"**🕺 NHÂN TRỰC BẢN MỆNH:**")
+    
+    # Hiển thị kết quả then chốt
+    #c1, c2 = st.columns(2)
+    #with c1:
+    #    st.metric(label="NHÂN TRỰC CHỦ", value=f"Trực {nhan_truc_chu}")
+    #with c2:
+    #    st.metric(label="HÀNH CỦA TRỰC", value=hanh_nhan_truc_chu)
+
+    st.success(f"👉 Bản mệnh có Ngày Sinh {canchi_input}, **Nhân Trực** tại cung **{chi_ban_menh}** là **Trực {nhan_truc_chu}** (hành **{hanh_nhan_truc_chu}**).")
+
+    # Hiển thị giải thích nguyên lý ngắn gọn
+    txt_mo_phong = f"Ngũ hành Nạp Âm **{canchi_input}_{hanh_nap_am}**"
+    if hanh_nap_am == "Thổ": txt_mo_phong += f" (mượn **{cuc_muon} cục**)"
+    
+    st.caption(f"💡 {txt_mo_phong} có Mộ tại {chi_mo}, khởi **Kiến tại {chi_khoi_kien}**, vận hành {gioi_tinh} {'Thuận' if huong == 1 else 'Nghịch'}.")
+
+    # Expander danh sách cung tham khảo
+    with st.expander(f"📊 Bảng chi tiết 12 cung Nhân Trực ({gioi_tinh})"):
+        col_a, col_b = st.columns(2)
+        mau_sac = {"Thổ": "brown", "Thủy": "blue", "Mộc": "green", "Hỏa": "red", "Kim": "gray"}
+        
+        for i, (chi, info) in enumerate(danh_sach_chi_tiet.items()):
+            # Sắp xếp hiển thị theo Tý, Sửu... cho dễ nhìn thay vì theo chiều an
+            pass 
+        
+        # Để dễ tra cứu, ta hiển thị theo thứ tự Tý -> Hợi
+        for i, chi in enumerate(LST_CHI):
+            info = danh_sach_chi_tiet[chi]
+            target_col = col_a if i < 6 else col_b
+            color = mau_sac.get(info['ngu_hanh'], "black")
+            
+            # Đánh dấu cung bản mệnh để người dùng dễ thấy
+            bg_color = "#ffffcc" if chi == chi_ban_menh else "transparent"
+            
+            target_col.markdown(
+                f"<div style='background-color:{bg_color}; padding:2px; border-radius:5px;'>"
+                f"Cung {chi}: Trực {info['truc']} "
+                f"(<span style='color:{color}; font-weight:bold;'>{info['ngu_hanh']}</span>)"
+                f"{' 🎯' if chi == chi_ban_menh else ''}</div>", 
+                unsafe_allow_html=True
+            )
+
+    # Trả về dữ liệu bao gồm cả thông tin tổng hợp để dễ truy xuất
+    return {
+        "nhan_truc_chu": nhan_truc_chu,
+        "hanh_nhan_truc": hanh_nhan_truc_chu,
+        "danh_sach_12_cung": danh_sach_chi_tiet,
+        "gioi_tinh": gioi_tinh,
+        "nap_am": hanh_nap_am
+    }
+
+# CỖ MÁY PHÂN TÍCH "Tam Mệnh Đồng Bộ"
+
+def lay_ds_ngay_trong_thang(thang_chon):
+    """
+    thang_chon: Tên tháng Can Chi cần lọc (Ví dụ: "Mậu Tý")
+    """
+    NGU_HANH_TRUC = {
+        "Kiến": "Thổ", "Trừ": "Thủy", "Mãn": "Thổ", "Bình": "Thủy",
+        "Định": "Mộc", "Chấp": "Hỏa", "Phá": "Hỏa", "Nguy": "Thủy",
+        "Thành": "Kim", "Thu": "Thủy", "Khai": "Kim", "Bế": "Kim"
+    }
+    
+    ds_ngay = []
+    
+    if "content" in st.session_state and st.session_state.content:
+        for row in st.session_state.content:
+            # Bỏ qua dòng trống hoặc dòng tiêu đề
+            if not row or "Ngày DL" in str(row[0]): 
+                continue
+            
+            try:
+                # Lấy giá trị tháng Can Chi ở cột 4 (index 3)
+                thang_trong_file = str(row[3]).strip()
+                
+                # CHỈ THÊM VÀO DANH SÁCH NẾU TRÙNG VỚI THÁNG ĐANG CHỌN
+                if thang_trong_file == thang_chon:
+                    ds_ngay.append({
+                        "ngay_dl": str(row[0]).strip(),
+                        "thang_cc": thang_trong_file,
+                        "ngay_cc": str(row[4]).strip(),
+                        "truc": str(row[9]).strip(),
+                        "ngu_hanh": NGU_HANH_TRUC.get(str(row[9]).strip(), "Chưa rõ")
+                    })
+            except: 
+                continue
+                
+    return ds_ngay
+
+# Giả định các hàm hien_thi_thien_truc_nam, hien_thi_dia_truc_nam, 
+# hien_thi_nhan_truc_ngay và phan_tich_logic_4_chieu đã được định nghĩa ở trên.
+
+def phan_tich_logic_4_chieu(nhan, thien, dia, nhat):
+    h_nhan = nhan['ngu_hanh']
+    h_thien = thien['ngu_hanh']
+    h_dia = dia['ngu_hanh']
+    h_nhat = nhat['ngu_hanh']
+    
+    sinh = {"Thủy": "Mộc", "Mộc": "Hỏa", "Hỏa": "Thổ", "Thổ": "Kim", "Kim": "Thủy"}
+    khac = {"Thủy": "Hỏa", "Hỏa": "Kim", "Kim": "Mộc", "Mộc": "Thổ", "Thổ": "Thủy"}
+
+    # Mặc định kết quả
+    res = {
+        "status": "Bình Hòa", 
+        "icon": "⚪", 
+        "detail": "Khí vận trung tính, tự lực cánh sinh."
+    }
+
+    # 1. CÁT CHỒNG CÁT
+    if (h_nhat == h_nhan or sinh[h_nhat] == h_nhan) and (h_dia == h_nhan or sinh[h_dia] == h_nhan):
+        res = {"status": "ĐẠI CÁT", "icon": "🌟", "detail": "Thiên Địa Nhân hợp nhất. Địa khí bảo vệ, Nhật khí bồi đắp."}
+    
+    # 2. THAM SINH VONG KHẮC (Hóa sát)
+    elif khac[h_nhat] == h_nhan and sinh[h_nhat] == h_dia and sinh[h_dia] == h_nhan:
+        res = {"status": "HÓA SÁT", "icon": "🛡️", "detail": "Sát khí ngày bị Địa khí năm chuyển hóa thành sinh khí. Hung biến thành Cát."}
+    
+    # 3. ĐẠI HAO TỔN
+    elif sinh[h_nhan] == h_nhat and sinh[h_nhan] == h_thien:
+        res = {"status": "ĐẠI HAO", "icon": "📉", "detail": "Nhật và Thiên cùng hút khí bản mệnh. Cẩn trọng sức khỏe, hao tài."}
+    
+    # 4. HUNG
+    elif khac[h_nhat] == h_nhan:
+        res = {"status": "HUNG", "icon": "❌", "detail": "Nhật khí khắc phạt trực tiếp bản mệnh. Dễ gặp trở ngại, thị phi."}
+        
+    return res
+
+
+def hien_thi_phan_tich_ngay_hien_tai(nam_ht, ngay_sinh_cc, gioi_tinh, thang_ht, ngay_cc_hien_tai):
+    """
+    ngay_cc_hien_tai: Can Chi của ngày cần xem (ví dụ: 'Giáp Tý')
+    """
+    # --- 1. TRÍCH XUẤT DỮ LIỆU ---
+    kq_thien = hien_thi_thien_truc_nam(nam_ht)
+    kq_dia = hien_thi_dia_truc_nam(nam_ht)
+    kq_nhan = hien_thi_nhan_truc_ngay(ngay_sinh_cc, gioi_tinh)
+    
+    # Thông tin vĩ mô tại cung tháng hiện tại
+    chi_thang = thang_ht.split()[-1] 
+    thien_nen = kq_thien['chi_tiet_12_cung'][chi_thang]
+    dia_nen = kq_dia['chi_tiet_12_cung'][chi_thang]
+    nhan_chu = {"truc": kq_nhan['nhan_truc_chu'], "ngu_hanh": kq_nhan['hanh_nhan_truc']}
+    
+    # --- 2. TÌM DỮ LIỆU NGÀY HIỆN TẠI TRONG CONTENT ---
+    ds_thang = lay_ds_ngay_trong_thang(thang_ht)
+    #st.write(ds_thang)
+    # Tìm dòng dữ liệu khớp với ngày Can Chi hiện tại
+    info_ngay = next((n for n in ds_thang if n['ngay_cc'] == ngay_cc_hien_tai), None)
+    #st.write(info_ngay)
+
+    if not info_ngay:
+        st.warning(f"Không tìm thấy dữ liệu cho ngày {ngay_cc_hien_tai} trong danh sách.")
+        return
+
+    # --- 3. PHÂN TÍCH LOGIC 4 CHIỀU ---
+    nhat_obj = {"truc": info_ngay['truc'], "ngu_hanh": info_ngay['ngu_hanh']}
+    res = phan_tich_logic_4_chieu(nhan_chu, thien_nen, dia_nen, nhat_obj)
+
+    # --- 4. HIỂN THỊ THÔNG TIN PHÂN TÍCH ---
+    st.markdown(f"**🎯 PHÂN TÍCH TAM MỆNH TRỰC Ngày {ngay_cc_hien_tai}**")
+    
+    # Hiển thị thẻ tóm tắt trạng thái
+    st.markdown(
+        f"""
+        <div style="background-color:{res.get('color', '#f0f2f6')}; padding:20px; border-radius:10px; border-left: 10px solid #333; color: black;">
+            <h2 style="margin:0;">{res['icon']} {res['status']}</h2>
+            <p style="font-size:18px; margin:10px 0;"><b>Luận giải:</b> {res['detail']}</p>
+        </div>
+        """, 
+        unsafe_allow_html=True
+    )
+
+    # Bổ sung lời khuyên hành động dựa trên Nhật Trực
+    with st.expander("📌 Xem chi tiết bản thể Ngũ Hành"):
+        st.write(f"- Bản Mệnh **Nhân Trực** Ngày Sinh {ngay_sinh_cc} là Trực {nhan_chu['truc']} hành **{nhan_chu['ngu_hanh']}** (cố định).")
+        st.write(f"- **Nhật Trực:** Hôm nay ngày {ngay_cc_hien_tai} Trực {info_ngay['truc']} mang khí **{info_ngay['ngu_hanh']}**.")
+        st.write(f"- Bối cảnh tháng {thang_ht}: Năm {nam_ht} tại cung {chi_thang} có **Địa Trực** là Trực {dia_nen['truc']} khí **{dia_nen['ngu_hanh']}** và **Thiên Trực** là Trực {thien_nen['truc']} khí **{thien_nen['ngu_hanh']}**.")
+
+
+# NHÂN MỆNH 
+def nhap_CanChi_ngaysinh(nam_canchi, thang_canchi, ngayCanChi):
     # 1. Định nghĩa các nhóm Can và Chi (Loại bỏ "" bên trong các tuple phụ)
     duong_can = ("GIÁP", "BÍNH", "MẬU", "CANH", "NHÂM")
     am_can = ("ẤT", "ĐINH", "KỶ", "TÂN", "QUÝ")
@@ -790,29 +1287,54 @@ def nhap_CanChi_ngaysinh():
     # Khởi tạo trạng thái trả lời
     if 'show_answer' not in st.session_state:
         st.session_state.show_answer = False
+    
+    gioi_tinh = st.selectbox("**Nhập GIỚI TÍNH**", ("", "Nam", "Nữ"))
 
     # Nút TRẢ LỜI
     if st.button("**TRẢ LỜI**"):
-        if nhap_canngaysinh and nhap_chingaysinh:
+        if nhap_canngaysinh and nhap_chingaysinh and gioi_tinh:
             st.session_state.show_answer = True
         else:
-            st.error("Vui lòng chọn đầy đủ Can và Chi ngày sinh!")
+            st.error("Vui lòng chọn đầy đủ Can và Chi ngày sinh và giới tính!")
 
     # Hiển thị nội dung khi show_answer = True
     if st.session_state.show_answer:
         # Giả sử lay_thong_tin trả về một list/tuple
-        thongtin_TDST = lay_thong_tin(nhap_canngaysinh, "TuDaiSatThoi")
+        thongtin_TDST = lay_thong_tin(nhap_canngaysinh, "II.TuDaiSatThoi")
         
         #st.markdown('---')
         st.markdown(f'<span style="color: darkred; font-size: 18px;">**TỨ ĐẠI SÁT THỜI vận cá nhân**</span>', unsafe_allow_html=True)
         st.success(f"Bạn đã chọn Ngày sinh: **{nhap_canngaysinh} {nhap_chingaysinh}**")
-        st.write(f"CAN Ngày Sinh **{nhap_canngaysinh}**: {thongtin_TDST[1]}")
+        st.write(f"Ngày Sinh CAN **{nhap_canngaysinh}**: {thongtin_TDST[1]}")
         
+        st.divider()
+        #THIÊN TRỰC
+        #ds_thiêntruc = hien_thi_thien_truc_nam(nam_canchi)
+        #st.write(ds_thiêntruc["Dần"]["truc"])
+
+        #ĐỊA TRỰC
+        #ds_diatruc = hien_thi_dia_truc_nam(nam_canchi)
+        #st.write(ds_diatruc["Mão"])
+
+        #NHÂN TRỰC (TRỰC MỆNH)
+        ngay_sinh = f"{nhap_canngaysinh} {nhap_chingaysinh}"
+        #st.write(ngay_sinh)
+        #nhantruc = hien_thi_nhan_truc_ngay(ngay_sinh, gioi_tinh)
+        #st.write(nhantruc['nhan_truc_chu'])
+        #st.write(nhantruc["danh_sach_12_cung"])
+        
+        # CỖ MÁY PHÂN TÍCH "Tam Mệnh Đồng Bộ"
+        
+        hien_thi_phan_tich_ngay_hien_tai(nam_canchi, ngay_sinh, gioi_tinh, thang_canchi, ngayCanChi)
+
+
+
+        """
         # Nút TIẾP TỤC xử lý bằng logic reset trạng thái
         if st.button("**TIẾP TỤC**"):
             st.balloons()
             st.warning("**Hẹn gặp lại Bạn ở phiên bản nâng cấp**\n\n **XIN CẢM ƠN !!!**")
-            # Tùy chọn: st.session_state.show_answer = False (để đóng lại sau khi cảm ơn)
-
-    return nhap_canngaysinh, nhap_chingaysinh
+            # Tùy chọn: st.session_state.show_answer = False (để đóng lại sau khi cảm ơn)"""
+        
+    
 
