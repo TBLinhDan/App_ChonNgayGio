@@ -55,7 +55,6 @@ with tab2:
 
 with tab3:
     #st.info('''Đổi Dương Lịch sang Kim Cang CAN CHI Lịch''')
-
     st.markdown('<span style="color: darkblue; font-size: 22px;">**TIÊU CHÍ CHỌN NGÀY/GIỜ**</span>', unsafe_allow_html=True)
     #DoiLich.coso_phuongphaptinh()
     DoiLich.hien_thi_nội_dung_file_expander("I. LuatBuTruTuongQuan", "LUẬT BÙ TRỪ TƯƠNG QUAN:")
@@ -67,8 +66,3 @@ with tab3:
     DoiLich.hien_thi_nội_dung_file_expander("I-6.GioQuyNhan", "I-6. Giờ QUÝ NHÂN ĐĂNG THIÊN MÔN")
     DoiLich.hien_thi_nội_dung_file_expander("I-7.TinhChatNguHanhThienCan", "I-7. TÍNH CHẤT NGŨ HÀNH THIÊN CAN")
     DoiLich.hien_thi_nội_dung_file_expander("II.TuDaiSatThoi", "II. Tránh TỨ ĐẠI SÁT THỜI Vận cá nhân")
-
-    st.subheader(f'**TIÊU CHÍ CHỌN NGÀY/GIỜ**')
-    st.markdown('<span style="color: darkblue; font-size: 20px;">**LUẬT BÙ TRỪ TƯƠNG QUAN:**</span>', unsafe_allow_html=True)
-    DoiLich.coso_phuongphaptinh()
-

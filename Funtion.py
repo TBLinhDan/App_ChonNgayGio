@@ -1327,6 +1327,14 @@ def nhap_CanChi_ngaysinh(nam_canchi, thang_canchi, ngayCanChi):
         
         hien_thi_phan_tich_ngay_hien_tai(nam_canchi, ngay_sinh, gioi_tinh, thang_canchi, ngayCanChi)
 
-    return nhap_canngaysinh, nhap_chingaysinh
 
+
+        """
+        # Nút TIẾP TỤC xử lý bằng logic reset trạng thái
+        if st.button("**TIẾP TỤC**"):
+            st.balloons()
+            st.warning("**Hẹn gặp lại Bạn ở phiên bản nâng cấp**\n\n **XIN CẢM ƠN !!!**")
+            # Tùy chọn: st.session_state.show_answer = False (để đóng lại sau khi cảm ơn)"""
+        
+    
 
